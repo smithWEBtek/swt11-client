@@ -1,6 +1,4 @@
-import './AppHeader'
 import NavBar from '../NavBar'
-import '../../styles.css'
 
 const AppHeader = () => {
   return (
