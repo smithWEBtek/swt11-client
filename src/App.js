@@ -1,4 +1,3 @@
-import './styles.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppHeader from './components/AppHeader/AppHeader';
 import AppFooter from './components/AppFooter/AppFooter';
