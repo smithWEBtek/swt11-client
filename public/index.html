@@ -1,134 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-<head>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="stylesheet" href="./styles.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <title>Brad Smith</title>
-</head>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-<body>
-  <div class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column header-nav">
-          <div>
-            <h2 class="title">
-              <a href="/" id="main-nav-title">Brad Smith</a>
-            </h2>
-            <!-- <nav class="subtitle">
-              <a href="/">samples</a>
-              <a href="/">library</a>
-              <a href="/">blog</a>
-            </nav> -->
-          </div>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column is-3">
-          <img src="https://res.cloudinary.com/smithwebtek/image/upload/v1627313096/swt/brad3.png" width="150px"
-            height="150px" style="border-radius: 5px" alt="bradsmith" />
-          <br />
-          <!-- <h3 class="subtitle"><strong>Brad Smith</strong></h3> -->
-          <span class="is-size-5"><b>Fullstack Web Developer</b></span>
-          <p>React, JavaScript</p>
-          <p>GraphQL, Storybook, HTML, CSS</p>
-          <p>Rails, Node, Linux, CI/CD, git</p>
-          <p>PostgreSQL, MySQL, REST API</p>
-          <p>JIRA, agile, scrum</p>
-          <p>Data design & visualization</p>
-          <p>Business process consulting</p>
-          <p>Knowledge transfer & facilitation</p>
-          <br />
-          <div>
-            <a href="https://github.com/smithwebtek" target="_blank">
-              <i class="fab fa-github" aria-hidden="true" style="margin: 3px"></i>
-            </a>
-            <a href="https://linkedin.com/in/smithwebtek" target="_blank">
-              <i class="fab fa-linkedin" aria-hidden="true" style="margin: 3px"></i>
-            </a>
-            <a href="mailto:brad@smithWEBtek.com">
-              <i class="fa fa-envelope" aria-hidden="true" style="margin: 3px"></i>
-            </a>
-          </div>
-          <div>
-            <strong><a href="brad-smith-resume.pdf">resume(pdf)</a></strong>
-          </div>
-          <div>
-            <strong><a href="brad-smith-resume.docx">resume(word)</a></strong>
-          </div>
-          <br />
-        </div>
-        <div class="column is-8 container">
-          <span class="is-size-4"><b>experience</b></span>
-          <div class="summary">
-            <b>Software engineer</b> for an enterprise application Math180 providing
-            math intervention in 57,000 public schools, focused on front end UI using <b>React,
-              MaterialUI, Storybook, GraphQL, Swagger, Jenkins,
-              JIRA, curl, html, css, sql, linux and a lot of git </b>with <i>Houghton-Mifflin Harcourt (HMH).</i></p>
-            <br />
-            <p>
-              <b>Fullstack professional experience with Ruby on Rails</b>
-              versions 3 through 6, from prototypes and civic applications
-              for MAPC Boston to migrating a large enterprise wellness app
-              for 1500+ breast cancer survivors
-              from Rails version 4x to 6 with<i> Dana-Farber Cancer Institute.</i>
-            </p>
-            <br />
-            <p>Worked with <b>postGIS geospatial data, D3, React and Rails</b> for mapping in civic
-              applications with </p><i>Metropolitan Area Planning Council (MAPC), Boston.</i>
-            </p>
-            <br />
-            <p>Strong ability to <b>absorb unfamiliar code bases</b> and adopt the team's approach to development.</p>
-            <p><b>Comfortable styling</b> in Material UI, Tailwind, Bulma, Bootstrap, SCSS, SASS, BEM</b>, vanilla css,
-              or whatever you prefer.</p>
-            <br />
-            <p>Enjoy solving issues backend to frontend to dial in results for Product Owners.</p>
-            <p>Friendly <b>eager-to-help, tenacious debugger.</b></p>
-            </p>
-          </div>
-          <br />
-          <span class="is-size-4"><b>education</b></span>
-          <ul>
-            <p>Flatiron School, NYC (2016 - 2018)</li>
-            <p>
-              Pragmatic Works SQL Server Foundation, Jacksonville, FL (2010)
-            </p>
-            <p>
-              Code for Boston - civic developer group, Boston, MA (2016 – 2021)
-            </p>
-            <p>
-              Fulltime professional coding since 2018
-            </p>
-          </ul>
-          <!-- <br />
-          <span class="is-size-4"><b>expertise</b></span>
-          <ul>
-            <p>React, JavaScript</li>
-            <p>GraphQL, Storybook, HTML, CSS</li>
-            <p>Rails, Node, Linux, CI/CD, git</li>
-            <p>PostgreSQL, MySQL, REST API</li>
-            <p>JIRA, agile, scrum</li>
-            <p>Data design & visualization</li>
-            <p>Business process consulting</li>
-            <p>Knowledge transfer & facilitation</li>
-          </ul>
-          <br /> -->
-        </div>
-      </div>
-      <br />
-      <br />
-      <br />
-      <div class="footer1">
-        <p class="copyright">&copy;2024 smithWEBtek</p>
-      </div>
-    </div>
-  </div>
-</body>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>
