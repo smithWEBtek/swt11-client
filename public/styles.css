@@ -15,7 +15,10 @@ body {
 
 .is-size-4 {
   color: rgb(97, 20, 20);
+}
 
+.is-size-5 {
+  color: rgb(97, 20, 20);
 }
 
 .main-nav:hover {
