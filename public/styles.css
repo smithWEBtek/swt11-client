@@ -2,14 +2,20 @@ body {
   background-color: rgb(234, 241, 241);
 }
 
-.heading {
+. {
   color: rgb(112, 40, 40);
   width: auto;
+  font-size: xx-large;
 }
 
 .projects-title {
   color: rgb(112, 40, 40);
   width: auto;
+}
+
+.is-size-4 {
+  color: rgb(97, 20, 20);
+
 }
 
 .main-nav:hover {
