@@ -1,0 +1,21 @@
+{
+  "canvas": {
+    "title": "Canvas: Library page",
+    "body": "Canvas: Welcome to smithWEBtek library and tekmarks."
+  },
+  "side": {
+    "title": "Library",
+    "body": "Side body: resources, tips."
+  },
+  "resources": {
+    "images": [
+      "cat.jpeg",
+      "dog.jpeg",
+      "fish.jpeg",
+      "turtle.jpeg"
+    ],
+    "videos": [],
+    "files": [],
+    "urls": []
+  }
+}

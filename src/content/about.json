@@ -1,0 +1,21 @@
+{
+  "canvas": {
+    "title": "Canvas: About Brad Smith",
+    "body": "Canvas: This is the about content for Brad Smith."
+  },
+  "side": {
+    "title": "About",
+    "body": "Side body: about."
+  },
+  "resources": {
+    "images": [
+      "cat.jpeg",
+      "dog.jpeg",
+      "fish.jpeg",
+      "turtle.jpeg"
+    ],
+    "videos": [],
+    "files": [],
+    "urls": []
+  }
+}
