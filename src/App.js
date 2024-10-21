@@ -1,17 +1,16 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import AppHeader from './components/AppHeader/AppHeader';
-import AppFooter from './components/AppFooter/AppFooter';
-import MainCanvas from './components/MainCanvas/MainCanvas';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import MainContent from './components/MainContent/MainContent';
+
 
 function App() {
   return (
     <Router>
-      <div className="container">
-        <AppHeader />
-        <MainCanvas />
-        <AppFooter />
-      </div>
-    </Router>
+      <Header />
+      <MainContent />
+      <Footer />
+    </Router >
   );
 }
 
