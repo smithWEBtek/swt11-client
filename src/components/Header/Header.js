@@ -1,4 +1,4 @@
-import HeaderNav from '../HeaderNav'
+// import HeaderNav from '../HeaderNav'
 import { Link } from 'react-router-dom';
 const Header = () => {
   return (
