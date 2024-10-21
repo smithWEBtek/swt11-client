@@ -1,0 +1,21 @@
+{
+  "canvas": {
+    "title": "Canvas: Home page",
+    "body": "Canvas: Welcome to smithWEBtek home."
+  },
+  "side": {
+    "title": "Side title",
+    "body": "Side body: Welcome to smithWEBtek home."
+  },
+  "resources": {
+    "images": [
+      "cat.jpeg",
+      "dog.jpeg",
+      "fish.jpeg",
+      "turtle.jpeg"
+    ],
+    "videos": [],
+    "files": [],
+    "urls": []
+  }
+}

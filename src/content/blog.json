@@ -1,0 +1,21 @@
+{
+  "canvas": {
+    "title": "Canvas: Brad Blog",
+    "body": "Canvas: Blog and things I want to remember."
+  },
+  "side": {
+    "title": "Blog",
+    "body": "Side body: blog."
+  },
+  "resources": {
+    "images": [
+      "cat.jpeg",
+      "dog.jpeg",
+      "fish.jpeg",
+      "turtle.jpeg"
+    ],
+    "videos": [],
+    "files": [],
+    "urls": []
+  }
+}
