@@ -86,11 +86,16 @@ body {
   height: 6rem;
 }
 
+.header-title-subtitle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .header-title {
   display: inline;
   font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 1rem;
+  margin: 0 18px 0;
 }
 
 .header-subtitle {
@@ -109,9 +114,11 @@ body {
 
 .headernav-link {
   color: #fff;
+  font-style: italic;
   margin-right: 6rem;
-  text-decoration: none;
   transition: transform 0.2s ease, font-weight 0.2s ease;
+  display: inline-block;
+  transform-origin: center;
 }
 
 .headernav-link:hover {
@@ -181,6 +188,10 @@ body {
   text-decoration: underline;
 }
 
+.resume-links {
+  margin: 16px 0 8px 0;
+}
+
 /* Experience and Education Sections */
 .section {
   background: #fff;
@@ -221,8 +232,6 @@ body {
 .sidecontent {
   background-color: rgb(246, 252, 254);
   color: navy;
-  border-radius: 6px;
-  border: .5px solid rgb(227, 227, 240);
   display: inline-block;
   width: 20%;
   height: 99%;
@@ -234,48 +243,44 @@ body {
 }
 
 .sidecontent-body {
-  border: 1px solid gray;
   border-radius: 6px;
   height: 400px;
 }
 
 /* SocialIcons */
 .social-icons-container {
-  margin-left: 8px;
-}
-
-.social-icon-github {
-  fill: #fff;
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin: 0 0.5rem;
-  transition: transform 0.2s ease, font-weight 0.2s ease;
+  padding: 0;
+  margin: 16px 0 8px 0;
 }
 
 .social-icon-linkedin {
   background-color: #fff;
   border-radius: 4px;
   display: inline-block;
-  height: 24px;
-  margin: 0 0.5rem;
+  width: 32px;
+  height: 30px;
   transition: transform 0.2s ease, font-weight 0.2s ease;
-  width: 24px;
+}
+
+.social-icon-github {
+  fill: #000000;
+  display: inline-block;
+  margin-left: 1rem;
+  transition: transform 0.2s ease, font-weight 0.2s ease;
 }
 
 .social-icon-emailenvelope {
-  filter: brightness(0) invert(1);
   display: inline-block;
   width: 32px;
-  height: 24px;
-  margin: 0 0.5rem;
+  height: 28px;
+  margin-left: 1rem;
   transition: transform 0.2s ease, font-weight 0.2s ease;
 }
 
 .social-icon-github:hover,
 .social-icon-linkedin:hover,
 .social-icon-emailenvelope:hover {
-  border: 3px solid #fff;
+  /* border: 3px solid #fff; */
   border-radius: 8px;
   transform: scale(1.2);
 }
