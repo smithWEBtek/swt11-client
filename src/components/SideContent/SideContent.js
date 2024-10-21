@@ -1,13 +1,13 @@
-const SideContent = ({ title, body, json }) => {
+const SideContent = ({ content }) => {
   return (
     <aside className="w-64 bg-gray-800 text-white flex-shrink-0 sidecontent">
       <div className="p-4">
-        <h2 className="text-xl font-bold sidecontent-title">{title}</h2>
       </div>
       <nav className="p-4">
-        <div className="sidecontent-body">{body}</div>
+        <div className="sidecontent-body">
+          <div className="side-content" dangerouslySetInnerHTML={{ __html: content }} />
+        </div>
       </nav>
-      <img src={`../assets/${json.resources.images[3]}`} alt='asdf' />
     </aside>
   )
 }
