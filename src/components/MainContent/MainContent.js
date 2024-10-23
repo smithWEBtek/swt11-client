@@ -17,7 +17,6 @@ const MainContent = ({ page }) => {
   const [tekMarksContent, setTekMarksContent] = useState('');
   const [projectsContent, setProjectsContent] = useState('')
 
-
   useEffect(() => {
     setSideBarContent(html[0].props.dangerouslySetInnerHTML.__html);
     setCanvasContent(html[1].props.dangerouslySetInnerHTML.__html);
@@ -35,11 +34,10 @@ const MainContent = ({ page }) => {
     }
   }
 
-
   return (
-    <div className="maincontent">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="flex h-screen">
+      <div className="flex flex-grow">
         <SideBar content={sideBarContent} />
         <div className="flex flex-row flex-grow">
           <Canvas content={canvasContentToRender()} />

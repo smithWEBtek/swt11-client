@@ -1,14 +1,14 @@
 [
   {
-    "title": "Math180",
-    "url": "<a href='https://hmhco.com' alt='HMH' target='_blank' rel='noreferrer' />",
-    "href": "https://hmhco.com",
-    "description": "Math intervention for ages 3-12",
+    "title": "Houghton-Mifflin Harcourt: Math180",
+    "url": "<a href='https://www.hmhco.com/programs/math-180' alt='HMH' target='_blank' rel='noreferrer' />",
+    "href": "https://www.hmhco.com/programs/math-180",
+    "description": "Math intervention for grades 3-12, Math 180® is a blended-learning, intensive math intervention program that builds algebra competence in core or dedicated intervention classrooms. Combined with teacher-facilitated instruction accelerate students toward grade-level proficiency, raising achievement scores by an average of 2+ years in one school year.",
     "image": "m180.png",
     "alt": "M180 site"
   },
   {
-    "title": "BWEL Breast Cancer Study",
+    "title": "Dana-Farber Cancer Institute: BWEL Breast Cancer Study",
     "url": "<a href='https://res.cloudinary.com/smithwebtek/image/upload/v1605984055/swt/bwel.png' />",
     "href": "https://res.cloudinary.com/smithwebtek/image/upload/v1605984055/swt/bwel.png",
     "description": "Refactor and migration to Rails version 6, refactoring legacy Javascript / jQuery to work with Rails 6 webpack. Refactor Twilio code for phone calls and text messages. Refactor Highcharts visualizations. Deploy to Ubuntu server. NOTE: trial ended 2022, site is no longer deployed.",
@@ -16,51 +16,35 @@
     "alt": "Dana-Farber BWEL study"
   },
   {
-    "title": "MetroCommon 2050",
+    "title": "Metropolitan Area Planning Council (MAPC): MetroCommon 2050",
     "url": "<a href='https://metrocommon.mapc.org/find-out' target='_blank' rel='noreferrer'>",
     "href": "https://metrocommon.mapc.org/find-out",
-    "description": "Front end design, development and backend implementation work, including design and implementation of a tagging feature to filter, organize and display content based on type and topic_areas, built with RefineryCMS, Ruby on Rails, jQuery and vanilla Javascript",
+    "description": "Front end design, development and backend implementation work, including design and implementation of a tagging feature to filter, organize and display content based on type and topic_areas, built with RefineryCMS, Ruby on Rails, jQuery and vanilla Javascript. The Metropolitan Area Planning Council (MAPC) is the regional planning agency serving the people who live and work in the 101 cities and towns of Boston.",
     "image": "metrocommon.png",
     "alt": "MetroCommon site"
   },
   {
-    "title": "MetroFuture in Action",
+    "title": "(MAPC): MetroFuture in Action",
     "url": "<a href='https://projects.metrofuture.org/' target='_blank' rel='noreferrer'>",
     "href": "https://projects.metrofuture.org/",
-    "description": "Triage and refactoring of a legacy app built with Backbone.js, refactored with a Rails API for backend data.",
+    "description": "Triage and refactoring of a legacy app built with Backbone.js, refactored with a Rails API for backend data. MetroFuture is MAPC's long-term plan for a more prosperous, equitable, sustainable region.",
     "image": "metrofuture.png",
     "alt": "metrofuture plan site"
   },
   {
-    "title": "Equity Agenda",
-    "url": "<a href='https://equityagenda.mapc.org/' target='_blank' rel='noreferrer'>",
-    "href": "https://equityagenda.mapc.org/",
-    "description": "Maintainence and refactoring of a legacy app that had been using CARTO data, refactored to use custom data sets.",
-    "image": "equity.png",
-    "alt": "Equity Climate Change site"
-  },
-  {
-    "title": "Massbuilds",
+    "title": "(MAPC): Massbuilds",
     "url": "<a href='http://massbuilds.com' target='_blank' rel='noreferrer'>",
     "href": "http://massbuilds.com",
-    "description": "Maintainence and refactoring of a legacy app built on Ember.js with Rails backend, which curates building plans past, present and future for Massachussets.",
+    "description": "Maintainence and refactoring of a legacy app built on Ember.js with Rails backend. Massbuilds is the Metropolitan Area Planning Council’s collaborative inventory of past, present and future real estate development projects. This tool provides governments, data analysts, urban planners, community advocates, and real estate developers with comprehensive data for thousands of projects across Massachusetts.",
     "image": "massbuilds.png",
     "alt": "massbuilds site"
   },
   {
-    "title": "Climate Vulnerability",
+    "title": "(MAPC): Climate Vulnerability",
     "url": "<a href='https://climate-vulnerability.mapc.org/' target='_blank' rel='noreferrer'>",
     "href": "https://climate-vulnerability.mapc.org/",
-    "description": "The impacts of climate change are not distributed equally.",
+    "description": "The impacts of climate change are not distributed equally. A group’s exposure to climate hazards, access to resources, and ability to plan for and rebuild after a climate event all factor into a group’s vulnerability to climate change. Which populations are most vulnerable to the climate hazards that are likely to impact Metro Boston?",
     "image": "climate.png",
     "alt": "climate change impact"
-  },
-  {
-    "title": "Data Common",
-    "url": "<a href='https://datacommon.mapc.org/' target='_blank' rel='noreferrer'>",
-    "href": "https://datacommon.mapc.org/",
-    "description": "Metropolitan Area Planning Council Data Common",
-    "image": "datacommon.png",
-    "alt": "mapc datacommon site"
   }
 ]

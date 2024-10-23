@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Math180 Houghton-Mifflin Harcourt",
+    "url": "<a href='https://hmhco.com' alt='HMH' target='_blank' rel='noreferrer' />",
+    "href": "https://hmhco.com",
+    "description": "Math intervention for grades 3-12, Math 180® is a blended-learning, intensive math intervention program that builds algebra competence in core or dedicated intervention classrooms. Combined with teacher-facilitated instruction accelerate students toward grade-level proficiency, raising achievement scores by an average of 2+ years in one school year.",
+    "image": "m180.png",
+    "alt": "M180 site"
+  },
+  {
+    "title": "BWEL Breast Cancer Study, Dana-Farber Cancer Institute",
+    "url": "<a href='https://res.cloudinary.com/smithwebtek/image/upload/v1605984055/swt/bwel.png' />",
+    "href": "https://res.cloudinary.com/smithwebtek/image/upload/v1605984055/swt/bwel.png",
+    "description": "Refactor and migration to Rails version 6, refactoring legacy Javascript / jQuery to work with Rails 6 webpack. Refactor Twilio code for phone calls and text messages. Refactor Highcharts visualizations. Deploy to Ubuntu server. NOTE: trial ended 2022, site is no longer deployed.",
+    "image": "bwel.png",
+    "alt": "Dana-Farber BWEL study"
+  },
+  {
+    "title": "Metropolitan Area Planning Council: MetroCommon 2050",
+    "url": "<a href='https://metrocommon.mapc.org/find-out' target='_blank' rel='noreferrer'>",
+    "href": "https://metrocommon.mapc.org/find-out",
+    "description": "Front end design, development and backend implementation work, including design and implementation of a tagging feature to filter, organize and display content based on type and topic_areas, built with RefineryCMS, Ruby on Rails, jQuery and vanilla Javascript",
+    "image": "metrocommon.png",
+    "alt": "MetroCommon site"
+  },
+  {
+    "title": "MetroFuture in Action",
+    "url": "<a href='https://projects.metrofuture.org/' target='_blank' rel='noreferrer'>",
+    "href": "https://projects.metrofuture.org/",
+    "description": "Triage and refactoring of a legacy app built with Backbone.js, refactored with a Rails API for backend data.",
+    "image": "metrofuture.png",
+    "alt": "metrofuture plan site"
+  },
+  {
+    "title": "Equity Agenda",
+    "url": "<a href='https://equityagenda.mapc.org/' target='_blank' rel='noreferrer'>",
+    "href": "https://equityagenda.mapc.org/",
+    "description": "Maintainence and refactoring of a legacy app that had been using CARTO data, refactored to use custom data sets.",
+    "image": "equity.png",
+    "alt": "Equity Climate Change site"
+  },
+  {
+    "title": "Massbuilds",
+    "url": "<a href='http://massbuilds.com' target='_blank' rel='noreferrer'>",
+    "href": "http://massbuilds.com",
+    "description": "Maintainence and refactoring of a legacy app built on Ember.js with Rails backend, which curates building plans past, present and future for Massachussets.",
+    "image": "massbuilds.png",
+    "alt": "massbuilds site"
+  },
+  {
+    "title": "Climate Vulnerability",
+    "url": "<a href='https://climate-vulnerability.mapc.org/' target='_blank' rel='noreferrer'>",
+    "href": "https://climate-vulnerability.mapc.org/",
+    "description": "The impacts of climate change are not distributed equally.",
+    "image": "climate.png",
+    "alt": "climate change impact"
+  },
+  {
+    "title": "Data Common",
+    "url": "<a href='https://datacommon.mapc.org/' target='_blank' rel='noreferrer'>",
+    "href": "https://datacommon.mapc.org/",
+    "description": "Metropolitan Area Planning Council Data Common",
+    "image": "datacommon.png",
+    "alt": "mapc datacommon site"
+  }
+]
