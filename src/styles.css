@@ -10,6 +10,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e8edef;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.35;
 }
 
 code {
@@ -30,14 +36,6 @@ body {
   margin: 0;
 }
 
-body {
-  background-color: #e8edef;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
 
 /* Container */
 .container {
@@ -55,7 +53,7 @@ body {
   text-align: center;
   padding: 10px;
   border-radius: 6px;
-  width: 90%;
+  width: 100%;
   margin: auto;
   margin-top: auto;
 }
@@ -76,7 +74,7 @@ body {
   margin: auto;
   margin-top: 4px;
   padding: 8px;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -109,13 +107,13 @@ body {
 
 /* HeaderNav */
 .headernav {
-  margin-left: 20rem;
+  margin-left: 17rem;
 }
 
 .headernav-link {
   color: #fff;
   font-style: italic;
-  margin-right: 6rem;
+  margin-right: 3rem;
   transition: transform 0.2s ease, font-weight 0.2s ease;
   display: inline-block;
   transform-origin: center;
@@ -128,16 +126,88 @@ body {
 
 /* MainContent */
 .maincontent {
-  width: 90%;
+  width: 95%;
   margin: auto;
   height: 75vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.canvas {
-  border: .5px solid rgb(227, 227, 240);
+/* Media Queries for Responsive Design */
+
+/* For small screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+  .maincontent {
+    width: 100%;
+    padding: 0 10px;
+    /* Optional: Add some padding */
+  }
+}
+
+/* For medium screens (e.g., tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .maincontent {
+    width: 90%;
+  }
+}
+
+/* For large screens (e.g., desktops) */
+@media (min-width: 1025px) {
+  .maincontent {
+    width: 80%;
+  }
+}
+
+.canvas-content {
+  border: .5px solid rgb(205, 205, 210);
   border-radius: 6px;
   margin-top: 3px;
-  height: 99%;
+  padding: 0 8px;
+  flex: 1;
+  flex-grow: 1;
+  /* Allow the canvas-content to grow and take available space */
+  width: 100%;
+  overflow: auto;
+}
+
+.canvas-title {
+  color: rgb(12, 53, 12);
+  font-size: x-large;
+  margin: 1rem 0;
+  text-decoration: underline;
+}
+
+.canvasright-content {
+  background-color: rgb(246, 252, 254);
+  border-radius: 6px;
+  border: 1px solid rgb(212, 212, 212);
+  color: navy;
+  margin-top: 3px;
+  width: 200px;
+}
+
+.canvasright-title {
+  border: 1px solid green;
+  color: green;
+}
+
+.canvasright-body {
+  border: 1px solid rgb(203, 16, 119);
+  color: rgb(203, 16, 119);
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 /* Profile Section */
@@ -188,6 +258,31 @@ body {
   text-decoration: underline;
 }
 
+/* Projects */
+.projects {
+  /* border: 1px dashed rgb(255, 1, 1); */
+}
+
+
+.project-card {
+  /* border: 1px solid red; */
+}
+
+.project-card__image {
+  /* border: 1px solid blue; */
+  width: 20%;
+}
+
+.project-card__title {
+  /* border: 1px solid greenyellow; */
+}
+
+.project-card__body {
+  /* border: 1px solid pink; */
+}
+
+
+/* Resume links*/
 .resume-links {
   margin: 16px 0 8px 0;
 }
@@ -228,22 +323,29 @@ body {
   color: #8b1c1c;
 }
 
-/* SideContent */
-.sidecontent {
+/* SideBar */
+.sidebar {
   background-color: rgb(246, 252, 254);
+  border-radius: 6px;
+  border: 1px solid rgb(212, 212, 212);
   color: navy;
   display: inline-block;
-  width: 20%;
   height: 99%;
   margin-top: 3px;
+  width: 20%;
 }
 
-.sidecontent-title {
-  color: rgb(69, 99, 69);
+.sidebar-title {
+  color: rgb(12, 53, 12);
+  font-size: x-large;
+  /* margin: 0 1rem; */
+  text-decoration: underline;
 }
 
-.sidecontent-body {
+.sidebar-body {
   border-radius: 6px;
+  color: rgb(12, 53, 12);
+  font-size: medium;
   height: 400px;
 }
 
@@ -283,6 +385,12 @@ body {
   /* border: 3px solid #fff; */
   border-radius: 8px;
   transform: scale(1.2);
+}
+
+.bookmark-title {
+  color: rgb(12, 53, 12);
+  font-size: large;
+  margin-top: 12px;
 }
 
 /* Responsive Design */
