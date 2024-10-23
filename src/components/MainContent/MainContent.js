@@ -15,8 +15,7 @@ const MainContent = ({ page }) => {
   const [canvasContent, setCanvasContent] = useState('');
   const [canvasRightContent, setCanvasRightContent] = useState('');
   const [tekMarksContent, setTekMarksContent] = useState('');
-  const [publishedContent, setProjectsContent] = useState('')
-
+  const [projectsContent, setProjectsContent] = useState('')
 
   useEffect(() => {
     setSideBarContent(html[0].props.dangerouslySetInnerHTML.__html);
@@ -28,18 +27,17 @@ const MainContent = ({ page }) => {
     switch (page) {
       case 'tekmarks':
         return tekMarksContent;
-      case 'published':
-        return publishedContent;
+      case 'projects':
+        return projectsContent;
       default:
         return canvasContent
     }
   }
 
-
   return (
-    <div className="maincontent">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="flex h-screen">
+      <div className="flex flex-grow">
         <SideBar content={sideBarContent} />
         <div className="flex flex-row flex-grow">
           <Canvas content={canvasContentToRender()} />
@@ -51,7 +49,7 @@ const MainContent = ({ page }) => {
           <FetchHtmlFromJson setHtmlContent={setTekMarksContent} />
         </>
       )}
-      {page === 'published' && (
+      {page === 'projects' && (
         <>
           <Projects filename={page} setHtmlContent={setProjectsContent} />
         </>

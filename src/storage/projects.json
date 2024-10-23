@@ -1,14 +1,14 @@
 [
   {
-    "title": "Math180",
+    "title": "Math180 Houghton-Mifflin Harcourt",
     "url": "<a href='https://hmhco.com' alt='HMH' target='_blank' rel='noreferrer' />",
     "href": "https://hmhco.com",
-    "description": "Math intervention for ages 3-12",
+    "description": "Math intervention for grades 3-12, Math 180® is a blended-learning, intensive math intervention program that builds algebra competence in core or dedicated intervention classrooms. Combined with teacher-facilitated instruction accelerate students toward grade-level proficiency, raising achievement scores by an average of 2+ years in one school year.",
     "image": "m180.png",
     "alt": "M180 site"
   },
   {
-    "title": "BWEL Breast Cancer Study",
+    "title": "BWEL Breast Cancer Study, Dana-Farber Cancer Institute",
     "url": "<a href='https://res.cloudinary.com/smithwebtek/image/upload/v1605984055/swt/bwel.png' />",
     "href": "https://res.cloudinary.com/smithwebtek/image/upload/v1605984055/swt/bwel.png",
     "description": "Refactor and migration to Rails version 6, refactoring legacy Javascript / jQuery to work with Rails 6 webpack. Refactor Twilio code for phone calls and text messages. Refactor Highcharts visualizations. Deploy to Ubuntu server. NOTE: trial ended 2022, site is no longer deployed.",
@@ -16,7 +16,7 @@
     "alt": "Dana-Farber BWEL study"
   },
   {
-    "title": "MetroCommon 2050",
+    "title": "Metropolitan Area Planning Council: MetroCommon 2050",
     "url": "<a href='https://metrocommon.mapc.org/find-out' target='_blank' rel='noreferrer'>",
     "href": "https://metrocommon.mapc.org/find-out",
     "description": "Front end design, development and backend implementation work, including design and implementation of a tagging feature to filter, organize and display content based on type and topic_areas, built with RefineryCMS, Ruby on Rails, jQuery and vanilla Javascript",

@@ -6,7 +6,7 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<MainContent page='about' />} />
       <Route path="/about" element={<MainContent page='about' />} />
-      <Route path="/published" element={<MainContent page='published' />} />
+      <Route path="/projects" element={<MainContent page='projects' />} />
       <Route path="/prototypes" element={<MainContent page='prototypes' />} />
       <Route path="/blog" element={<MainContent page='blog' />} />
       <Route path="/library" element={<MainContent page='library' />} />

@@ -163,12 +163,11 @@ body {
   border: .5px solid rgb(205, 205, 210);
   border-radius: 6px;
   margin-top: 3px;
-  padding: 0 8px;
   flex: 1;
   flex-grow: 1;
-  /* Allow the canvas-content to grow and take available space */
   width: 100%;
-  overflow: auto;
+  /* overflow: auto; */
+  margin-left: 4px;
 }
 
 .canvas-title {
@@ -179,22 +178,24 @@ body {
 }
 
 .canvasright-content {
-  background-color: rgb(246, 252, 254);
+  /* background-color: rgb(246, 252, 254);
   border-radius: 6px;
   border: 1px solid rgb(212, 212, 212);
-  color: navy;
-  margin-top: 3px;
-  width: 200px;
+  margin-top: 3px; */
+  color: rgb(205, 207, 212);
+  /* width: 100px;s */
+  line-height: 1;
+  padding: 4px;
 }
 
 .canvasright-title {
-  border: 1px solid green;
-  color: green;
+  /* border: 1px solid green;
+  color: green; */
 }
 
 .canvasright-body {
-  border: 1px solid rgb(203, 16, 119);
-  color: rgb(203, 16, 119);
+  /* border: 1px solid rgb(203, 16, 119);
+  color: rgb(203, 16, 119); */
 }
 
 
@@ -258,70 +259,44 @@ body {
   text-decoration: underline;
 }
 
-/* Projects */
-.projects-content {
-  border: .5px solid rgb(205, 205, 210);
-  border-radius: 6px;
-  margin-top: 3px;
-  padding: 0 8px;
-  flex: 1;
-  flex-grow: 1;
-  /* Allow the canvas-content to grow and take available space */
-  width: 100%;
-  overflow: auto;
-}
-
+/* Projects project-card */
 .project-card {
   display: flex;
   border: 1px solid #ddd;
-  /* Light border around the card */
   border-radius: 8px;
-  /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
-  overflow: hidden;
-  /* Ensure content stays within the card */
-  transition: transform 0.2s;
-  /* Smooth transition for hover effect */
-  max-width: 250px;
-  /* Maximum width of the card */
-  margin: 20px;
-  /* Space around the card */
-  text-align: center;
-  /* Center-align text */
+  transition: transform 0.6s;
+  /* width: 100%; */
+  text-align: left;
+}
+
+.project-card a {
+  height: 150px;
+  margin-bottom: 4px;
+}
+
+.project-card img {
+  min-width: 180px;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   /* Slightly enlarge the card on hover */
 }
 
 .project-title {
-  font-size: 1.5em;
-  /* Larger font size for the title */
+  font-size: large;
+  padding-left: 1rem;
   margin-bottom: 8px;
-  /* Space above and below the title */
   color: #333;
-  /* Darker color for the title */
-}
-
-.project-image {
-  flex: 1;
-  width: 100%;
-  /* Full width of the card */
-  height: auto;
-  /* Maintain aspect ratio */
-  border-bottom: 1px solid #ddd;
-  /* Border between image and content */
 }
 
 .project-description {
-  font-size: 1em;
-  /* Standard font size for the description */
-  color: #666;
-  /* Lighter color for the description */
+  font-size: 90%;
+  padding-left: 1rem;
+  color: #000000;
+  width: 100%;
 }
-
 
 .project-details {
   flex: 1;
