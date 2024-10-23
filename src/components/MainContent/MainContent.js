@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import StaticHtmlRenderer from "../utils/StaticHtmlRenderer";
 import FetchHtmlFromJson from '../utils/FetchHtmlFromJson';
+import Projects from '../Projects/Projects';
 
 import Header from '../Header/Header';
 import SideBar from "../SideBar/SideBar";
@@ -14,6 +15,8 @@ const MainContent = ({ page }) => {
   const [canvasContent, setCanvasContent] = useState('');
   const [canvasRightContent, setCanvasRightContent] = useState('');
   const [tekMarksContent, setTekMarksContent] = useState('');
+  const [publishedContent, setProjectsContent] = useState('')
+
 
   useEffect(() => {
     setSideBarContent(html[0].props.dangerouslySetInnerHTML.__html);
@@ -21,7 +24,17 @@ const MainContent = ({ page }) => {
     setCanvasRightContent(html[2].props.dangerouslySetInnerHTML.__html);
   }, [page, html]);
 
-  const canvasContentToRender = page === 'tekmarks' ? tekMarksContent : canvasContent;
+  const canvasContentToRender = () => {
+    switch (page) {
+      case 'tekmarks':
+        return tekMarksContent;
+      case 'published':
+        return publishedContent;
+      default:
+        return canvasContent
+    }
+  }
+
 
   return (
     <div className="maincontent">
@@ -29,13 +42,18 @@ const MainContent = ({ page }) => {
       <div className="flex h-screen">
         <SideBar content={sideBarContent} />
         <div className="flex flex-row flex-grow">
-          <Canvas content={canvasContentToRender} />
+          <Canvas content={canvasContentToRender()} />
           <CanvasRight content={canvasRightContent} />
         </div>
       </div>
       {page === 'tekmarks' && (
         <>
           <FetchHtmlFromJson setHtmlContent={setTekMarksContent} />
+        </>
+      )}
+      {page === 'published' && (
+        <>
+          <Projects filename={page} setHtmlContent={setProjectsContent} />
         </>
       )}
       <Footer />
