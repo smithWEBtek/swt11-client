@@ -15,7 +15,7 @@ const MainContent = ({ page }) => {
   const [canvasContent, setCanvasContent] = useState('');
   const [canvasRightContent, setCanvasRightContent] = useState('');
   const [tekMarksContent, setTekMarksContent] = useState('');
-  const [publishedContent, setProjectsContent] = useState('')
+  const [projectsContent, setProjectsContent] = useState('')
 
 
   useEffect(() => {
@@ -28,8 +28,8 @@ const MainContent = ({ page }) => {
     switch (page) {
       case 'tekmarks':
         return tekMarksContent;
-      case 'published':
-        return publishedContent;
+      case 'projects':
+        return projectsContent;
       default:
         return canvasContent
     }
@@ -51,7 +51,7 @@ const MainContent = ({ page }) => {
           <FetchHtmlFromJson setHtmlContent={setTekMarksContent} />
         </>
       )}
-      {page === 'published' && (
+      {page === 'projects' && (
         <>
           <Projects filename={page} setHtmlContent={setProjectsContent} />
         </>
