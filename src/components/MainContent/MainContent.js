@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import StaticHtmlRenderer from "../utils/StaticHtmlRenderer";
-import Bookmarks from '../Bookmarks/Bookmarks';
-import Projects from '../Projects/Projects';
-
 import Header from '../Header/Header';
 import SideBar from "../SideBar/SideBar";
 import Canvas from '../Canvas/Canvas';
 import Footer from '../Footer/Footer';
+import StaticHtmlRenderer from "../utils/StaticHtmlRenderer";
+import Bookmarks from '../Bookmarks/Bookmarks';
+import Projects from '../Projects/Projects';
+import Prototypes from '../Prototypes/Prototypes';
 
 const MainContent = ({ page }) => {
   const html = StaticHtmlRenderer(`${page}.html`);
@@ -14,6 +14,7 @@ const MainContent = ({ page }) => {
   const [canvasContent, setCanvasContent] = useState('');
   const [bookmarksContent, setBookmarksContent] = useState(null);
   const [projectsContent, setProjectsContent] = useState('')
+  const [prototypesContent, setPrototypesContent] = useState('')
 
   useEffect(() => {
     setSideBarContent(html[0].props.dangerouslySetInnerHTML.__html);
@@ -26,6 +27,8 @@ const MainContent = ({ page }) => {
         return bookmarksContent;
       case 'projects':
         return projectsContent;
+      case 'prototypes':
+        return prototypesContent;
       default:
         return canvasContent
     }
@@ -47,6 +50,11 @@ const MainContent = ({ page }) => {
       {page === 'projects' && (
         <>
           <Projects filename={page} setHtmlContent={setProjectsContent} />
+        </>
+      )}
+      {page === 'prototypes' && (
+        <>
+          <Prototypes filename={page} setHtmlContent={setPrototypesContent} />
         </>
       )}
       <Footer />

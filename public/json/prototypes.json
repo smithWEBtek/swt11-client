@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Voter Map",
+    "url": "<a href='https://voter.smithwebtek.com' alt='voter map' target='_blank' rel='noreferrer' />",
+    "href": "https://voter.smithwebtek.com",
+    "description": "Demo app for capturing live votes based on geo data in a clickable map with real time chart update.",
+    "image": "/prototypes/voter.png",
+    "alt": "voter map site"
+  },
+  {
+    "title": "Movie Genres: Netflix",
+    "url": "<a href='https://movies.smithwebtek.com' alt='netflix genres' target='_blank' rel='noreferrer' />",
+    "href": "https://movies.smithwebtek.com",
+    "description": "Demo app for displaying Netflix genres, opens to your account to choose movie based on genre.",
+    "image": "/prototypes/movies.png",
+    "alt": "Netflix genres site"
+  },
+  {
+    "title": "Music Studio",
+    "url": "<a href='https://music-studio.smithwebtek.com' alt='netflix genres' target='_blank' rel='noreferrer' />",
+    "href": "https://music-studio.smithwebtek.com",
+    "description": "Music studio management app allows Teachers and Students to track of assigned Resources in a music Lesson with Resources in PDF, Audio and Video",
+    "image": "/prototypes/musicstudio.png",
+    "alt": "music-studio site"
+  },
+  {
+    "title": "Cooler Communities",
+    "url": "<a href='https://cooler.smithwebtek.com' alt='netflix genres' target='_blank' rel='noreferrer' />",
+    "href": "https://cooler.smithwebtek.com",
+    "description": "Demo app for tracking carbon emission reduction for a community.",
+    "image": "/prototypes/cooler.png",
+    "alt": "Cooler Communities site"
+  },
+  {
+    "title": "Pool Service Management",
+    "url": "<a href='https://poolservice.smithwebtek.com' alt='netflix genres' target='_blank' rel='noreferrer' />",
+    "href": "https://poolservice.smithwebtek.com",
+    "description": "Demo app for tracking pool service business with two retails locations and seven service trucks.",
+    "image": "/prototypes/poolservice.png",
+    "alt": "pool service site"
+  }
+]
