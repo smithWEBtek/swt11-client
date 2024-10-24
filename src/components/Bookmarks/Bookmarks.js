@@ -1,8 +1,10 @@
-import { useEffect, useCallback } from 'react';
-import ReactDOMServer from 'react-dom/server';
+import { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
+import { Accordion } from 'flowbite-react';
 
 const Bookmarks = ({ setHtmlContent }) => {
+  const [families, setFamilies] = useState([]);
+
   const constructFamilies = useCallback((data) => {
     const families = [];
     const urlsWithJavascript = [];
@@ -46,24 +48,7 @@ const Bookmarks = ({ setHtmlContent }) => {
         const data = await response.json();
 
         const families = constructFamilies(data);
-
-        const htmlContent = families.map((family, index) => {
-          const childBookmarks = family.bookmarks.map((child, childIndex) => (
-            <li key={childIndex}><a href={child.url}>{child.title}</a></li>
-          ));
-          return (
-            <div key={index}>
-              <div className="bookmark-title"><b>{family.title}</b></div>
-              <ul>
-                {childBookmarks}
-              </ul>
-            </div>
-          );
-        });
-
-        const htmlString = ReactDOMServer.renderToString(<div className='bookmarks-content'><div className="canvas-title">bookmarks</div>{htmlContent}</div>);
-        setHtmlContent(htmlString);
-
+        setFamilies(families);
       } catch (error) {
         console.error('Error fetching bookmarks:', error);
         setHtmlContent(`<div>Error: ${error.message}</div>`);
@@ -72,7 +57,30 @@ const Bookmarks = ({ setHtmlContent }) => {
     fetchData();
   }, [setHtmlContent, constructFamilies]);
 
-  return null;
+  return (
+    <div className='bookmarks-content'>
+      <div className="canvas-title">bookmarks</div>
+      <Accordion defaultOpen={[]}>
+        {families.map((family, index) => {
+          const childBookmarks = family.bookmarks.map((child, childIndex) => (
+            <p key={childIndex} className="mb-2 text-gray-500 dark:text-gray-400">
+              <a href={child.url}>{child.title}</a>
+            </p>
+          ));
+          return (
+            <Accordion.Panel key={index}>
+              <Accordion.Title>
+                {family.title}
+              </Accordion.Title>
+              <Accordion.Content>
+                {childBookmarks}
+              </Accordion.Content>
+            </Accordion.Panel>
+          );
+        })}
+      </Accordion>
+    </div>
+  );
 };
 
 Bookmarks.propTypes = {
