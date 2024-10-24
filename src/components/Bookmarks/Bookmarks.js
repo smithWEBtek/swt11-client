@@ -60,7 +60,7 @@ const Bookmarks = ({ setHtmlContent }) => {
   return (
     <div className='bookmarks-content'>
       <div className="canvas-title">bookmarks</div>
-      <Accordion defaultOpen={[]}>
+      <Accordion defaultopen={[]}>
         {families.map((family, index) => {
           const childBookmarks = family.bookmarks.map((child, childIndex) => (
             <p key={childIndex} className="mb-2 text-gray-500 dark:text-gray-400">

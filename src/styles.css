@@ -113,7 +113,7 @@ body {
 .headernav-link {
   color: #fff;
   font-style: italic;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   transition: transform 0.2s ease, font-weight 0.2s ease;
   display: inline-block;
   transform-origin: center;
@@ -322,6 +322,59 @@ body {
   justify-content: center;
   /* Center the content vertically */
 }
+
+/* Prototypes project-card */
+/* Prototypes prototype-card */
+.prototype-card {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s;
+  width: 80%;
+  text-align: left;
+  height: 8rem;
+}
+
+.prototype-card a {
+  height: 150px;
+  margin-bottom: 4px;
+}
+
+.prototype-card img {
+  min-width: 12rem;
+}
+
+.prototype-card:hover {
+  transform: scale(1.01);
+  /* Slightly enlarge the card on hover */
+}
+
+.prototype-title {
+  font-size: large;
+  padding-left: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.prototype-description {
+  font-size: 90%;
+  padding-left: 1rem;
+  color: #000000;
+  width: 60%;
+}
+
+.prototype-details {
+  flex: 1;
+  /* Allow the details to take up the remaining space */
+  padding: 16px;
+  /* Padding around the details */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center the content vertically */
+}
+
 
 /* Resume links*/
 .resume-links {
