@@ -37,14 +37,13 @@ const MainContent = ({ page }) => {
       <div className="flex flex-grow">
         <SideBar content={sideBarContent} />
         <div className="flex flex-row flex-grow">
-          <Canvas content={canvasContentToRender()} />
+          {page === 'bookmarks' ? (
+            <Bookmarks setHtmlContent={setBookmarksContent} />
+          ) :
+            <Canvas content={canvasContentToRender()} />
+          }
         </div>
       </div>
-      {page === 'bookmarks' && (
-        <>
-          <Bookmarks setHtmlContent={setBookmarksContent} />
-        </>
-      )}
       {page === 'projects' && (
         <>
           <Projects filename={page} setHtmlContent={setProjectsContent} />
