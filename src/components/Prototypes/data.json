@@ -1,0 +1,20 @@
+[
+  {
+    "title": "acme",
+    "url": "acme.com",
+    "about": "all about acme.com",
+    "techstack": "Rails API and React client on Ubuntu server, with postgres database"
+  },
+  {
+    "title": "the real coyotte",
+    "url": "gettheroadrunner.com",
+    "about": "you know what I want",
+    "techstack": "Rails API and React client on Ubuntu server, with postgres database"
+  },
+  {
+    "title": "road runner",
+    "url": "beepbeep.com",
+    "about": "road runner waits for no one",
+    "techstack": "Rails API and React client on Ubuntu server, with postgres database"
+  }
+]

@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div className='header'>
-
       <Link to='/'>
-        <img src="/images/brad.png" alt="bradsmith" className="header-headshot" />
+        <img src="/images/misc/brad.png" alt="bradsmith" className="header-headshot" />
       </Link>
       <div>
         <Link to='/' className='header-title-subtitle-container'>

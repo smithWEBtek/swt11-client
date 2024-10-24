@@ -12,9 +12,7 @@ const SideBar = () => {
   return (
     <aside className="w-64 bg-gray-800 text-white flex-shrink-0 sidebar">
       <nav className="p-4">
-        <div className="sidebar-body">
-          <div className="sidebar-content" dangerouslySetInnerHTML={{ __html: sideBarContent }} />
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: sideBarContent }} />
       </nav>
     </aside>
   )
