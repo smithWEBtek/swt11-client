@@ -10,7 +10,7 @@ const Projects = ({ filename, setHtmlContent }) => {
     return (`
       <div class="project-card">
         <a href=${project.href} class="project-card">
-          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src='/images/${project.image}' alt=${project.alt}>
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src='${project.image}' alt=${project.alt}>
           <div class="flex flex-col">
             <h5 class="project-title mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${project.title}</h5>
             <p class="project-description mb-3 font-normal text-gray-700 dark:text-gray-400">${project.description}</p>
