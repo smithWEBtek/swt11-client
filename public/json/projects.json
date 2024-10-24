@@ -11,7 +11,7 @@
     "title": "Dana-Farber Cancer Institute: BWEL Breast Cancer Study",
     "url": "<a href='https://res.cloudinary.com/smithwebtek/image/upload/v1605984055/swt/bwel.png' />",
     "href": "https://res.cloudinary.com/smithwebtek/image/upload/v1605984055/swt/bwel.png",
-    "description": "Refactor and migration to Rails version 6, refactoring legacy Javascript / jQuery to work with Rails 6 webpack. Refactor Twilio code for phone calls and text messages. Refactor Highcharts visualizations. Deploy to Ubuntu server. NOTE: trial ended 2022, site is no longer deployed.",
+    "description": "Refactor and migration to Rails version 6, refactoring legacy Javascript / jQuery to work with Rails 6 webpack. Refactor Twilio code for phone calls and text messages. Refactor Highcharts visualizations. Deploy to Ubuntu server. <br>NOTE: trial ended 2022, site is no longer deployed.",
     "image": "bwel.png",
     "alt": "Dana-Farber BWEL study"
   },

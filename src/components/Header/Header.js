@@ -12,8 +12,8 @@ const Header = () => {
           <div className='header-title'>Brad Smith</div>
           <div className='header-subtitle'>fullstack software engineer</div>
         </Link>
-        <HeaderNav className='header-nav' />
       </div>
+      <HeaderNav />
     </div>
   )
 }

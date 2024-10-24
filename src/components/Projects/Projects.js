@@ -1,5 +1,3 @@
-// components/Projects.js
-
 import React, { useEffect, useState } from 'react';
 import fetchJson from '../utils/fetchJson';
 import PropTypes from 'prop-types';

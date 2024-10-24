@@ -33,8 +33,6 @@ const FetchHtmlFromJson = ({ setHtmlContent }) => {
       families.push(family);
     });
 
-    console.log('families: ', families);
-    console.log('urlsWithJavascript: ', urlsWithJavascript);
     return families;
   }, []);
 
@@ -63,7 +61,7 @@ const FetchHtmlFromJson = ({ setHtmlContent }) => {
           );
         });
 
-        const htmlString = ReactDOMServer.renderToString(<><div className="canvas-title">tekmarks</div>{htmlContent}</>);
+        const htmlString = ReactDOMServer.renderToString(<div className='bookmarks-content'><div className="canvas-title">tekmarks</div>{htmlContent}</div>);
         setHtmlContent(htmlString);
 
       } catch (error) {
