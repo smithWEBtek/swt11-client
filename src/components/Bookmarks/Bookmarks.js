@@ -2,7 +2,7 @@ import { useEffect, useCallback } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import PropTypes from 'prop-types';
 
-const FetchHtmlFromJson = ({ setHtmlContent }) => {
+const Bookmarks = ({ setHtmlContent }) => {
   const constructFamilies = useCallback((data) => {
     const families = [];
     const urlsWithJavascript = [];
@@ -61,7 +61,7 @@ const FetchHtmlFromJson = ({ setHtmlContent }) => {
           );
         });
 
-        const htmlString = ReactDOMServer.renderToString(<div className='bookmarks-content'><div className="canvas-title">tekmarks</div>{htmlContent}</div>);
+        const htmlString = ReactDOMServer.renderToString(<div className='bookmarks-content'><div className="canvas-title">bookmarks</div>{htmlContent}</div>);
         setHtmlContent(htmlString);
 
       } catch (error) {
@@ -75,8 +75,8 @@ const FetchHtmlFromJson = ({ setHtmlContent }) => {
   return null;
 };
 
-FetchHtmlFromJson.propTypes = {
+Bookmarks.propTypes = {
   setHtmlContent: PropTypes.func.isRequired,
 };
 
-export default FetchHtmlFromJson;
+export default Bookmarks;

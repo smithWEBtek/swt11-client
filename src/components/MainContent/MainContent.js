@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import StaticHtmlRenderer from "../utils/StaticHtmlRenderer";
-import FetchHtmlFromJson from '../utils/FetchHtmlFromJson';
+import Bookmarks from '../Bookmarks/Bookmarks';
 import Projects from '../Projects/Projects';
 
 import Header from '../Header/Header';
@@ -42,7 +42,7 @@ const MainContent = ({ page }) => {
       </div>
       {page === 'bookmarks' && (
         <>
-          <FetchHtmlFromJson setHtmlContent={setBookmarksContent} />
+          <Bookmarks setHtmlContent={setBookmarksContent} />
         </>
       )}
       {page === 'projects' && (
