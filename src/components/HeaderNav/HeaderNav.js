@@ -8,7 +8,7 @@ const HeaderNav = () => {
       <Link to='/prototypes' className='headernav-link'>prototypes</Link>
       <Link to='/blog' className='headernav-link'>blog</Link>
       <Link to='/library' className='headernav-link'>library</Link>
-      <Link to='/tekmarks' className='headernav-link'>tekmarks</Link>
+      <Link to='/bookmarks' className='headernav-link'>bookmarks</Link>
     </div>)
 }
 

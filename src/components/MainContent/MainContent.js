@@ -6,27 +6,24 @@ import Projects from '../Projects/Projects';
 import Header from '../Header/Header';
 import SideBar from "../SideBar/SideBar";
 import Canvas from '../Canvas/Canvas';
-import CanvasRight from "../CanvasRight";
 import Footer from '../Footer/Footer';
 
 const MainContent = ({ page }) => {
   const html = StaticHtmlRenderer(`${page}.html`);
   const [sideBarContent, setSideBarContent] = useState('');
   const [canvasContent, setCanvasContent] = useState('');
-  const [canvasRightContent, setCanvasRightContent] = useState('');
-  const [tekMarksContent, setTekMarksContent] = useState('');
+  const [bookmarksContent, setBookmarksContent] = useState(null);
   const [projectsContent, setProjectsContent] = useState('')
 
   useEffect(() => {
     setSideBarContent(html[0].props.dangerouslySetInnerHTML.__html);
     setCanvasContent(html[1].props.dangerouslySetInnerHTML.__html);
-    setCanvasRightContent(html[2].props.dangerouslySetInnerHTML.__html);
   }, [page, html]);
 
   const canvasContentToRender = () => {
     switch (page) {
-      case 'tekmarks':
-        return tekMarksContent;
+      case 'bookmarks':
+        return bookmarksContent;
       case 'projects':
         return projectsContent;
       default:
@@ -41,12 +38,11 @@ const MainContent = ({ page }) => {
         <SideBar content={sideBarContent} />
         <div className="flex flex-row flex-grow">
           <Canvas content={canvasContentToRender()} />
-          <CanvasRight content={canvasRightContent} />
         </div>
       </div>
-      {page === 'tekmarks' && (
+      {page === 'bookmarks' && (
         <>
-          <FetchHtmlFromJson setHtmlContent={setTekMarksContent} />
+          <FetchHtmlFromJson setHtmlContent={setBookmarksContent} />
         </>
       )}
       {page === 'projects' && (

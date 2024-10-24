@@ -107,13 +107,13 @@ body {
 
 /* HeaderNav */
 .headernav {
-  margin-left: 17rem;
+  margin-left: 4rem;
 }
 
 .headernav-link {
   color: #fff;
   font-style: italic;
-  margin-right: 3rem;
+  margin-right: 1rem;
   transition: transform 0.2s ease, font-weight 0.2s ease;
   display: inline-block;
   transform-origin: center;
@@ -122,6 +122,7 @@ body {
 .headernav-link:hover {
   cursor: pointer;
   transform: scale(1.2);
+  text-shadow: 0 0 1px currentColor;
 }
 
 /* MainContent */
@@ -177,6 +178,17 @@ body {
   text-decoration: underline;
 }
 
+.bookmarks-content {
+  border: .5px solid rgb(205, 205, 210);
+  border-radius: 6px;
+  margin-top: 3px;
+  flex: 1;
+  flex-grow: 1;
+  width: 70%;
+  /* overflow: auto; */
+  margin-left: 4px;
+}
+
 .canvasright-content {
   /* background-color: rgb(246, 252, 254);
   border-radius: 6px;
@@ -196,6 +208,8 @@ body {
 .canvasright-body {
   /* border: 1px solid rgb(203, 16, 119);
   color: rgb(203, 16, 119); */
+  border: 1px solid red;
+  width: 100px;
 }
 
 
