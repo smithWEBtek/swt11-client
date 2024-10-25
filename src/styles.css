@@ -239,7 +239,8 @@ body {
 }
 
 .post-card-title {
-  color: rgb(4, 4, 11);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
 }
 
 .post-card {
@@ -253,7 +254,8 @@ body {
 
 .post-summary {
   color: rgb(80, 80, 96);
-  margin-left: 1rem;
+  margin-left: 4px;
+  font-size: 14px;
 }
 
 
