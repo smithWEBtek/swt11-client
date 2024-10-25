@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6-habits.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="the-list">THE LIST</h2>
+<p>This is my current list, as it came stream of consciousness.
+Your mission: get inspired by one or more of these ideas, and implement it if you want to.</p>
+<p>This is a list of things I wish I had done in my first 2 years as a developer and student of development. While I did do several of these, I did not do ALL of them as EARLY as I could, or as FREQUENTLY as I wish, or as CONSISTENTLY as I would have preferred. Think of this article as your 'future self' talking to you and giving you advice that you should take to heart now.</p>
+<p><em>WARNING</em>
+These are all common sense habits, but they do not have the urgency that matches their importance over the long term.
+You will never see these habits as urgently as a ringing phone, or alarm.
+But they are worth doing, even if your &quot;progress&quot; slows a bit, in terms of speeding through the curriculum.
+Habits can be formed in 30 days.
+You'll start out having to prioritize things that don't seem as important as cranking through labs.
+It will seem like you are wasting time.</p>
+<h3 id="1-make-litte-green-boxes-on-github-every-day">1. MAKE LITTE GREEN BOXES ON GITHUB, every day</h3>
+<p>No matter how good looking you are, or how good your resume is, or how much your cool site talks about how you save the world, or how many people think you are fun to hang with, or how many people at meetups recognize your face, or how many emails you send to potential jobs.....(...add more if you like)</p>
+<h4 id="making-little-green-boxes-on-github">Making little green boxes on GitHub:</h4>
+<p>... will show that you are consistently practicing your craft
+... will help mitigate the fact that you don't have years of experience to reference.
+... will demonstrate that you can be useful to an enterprise.</p>
+<h4 id="a-professional-musician-practices-or-makes-music-every-day">A professional musician practices or makes music every day.</h4>
+<p>Developers code every day. And you have no idea how much you are actually learning, especially if you stop for awhile and come back to find your mind is blank. Don't worry, it is accumulating in there, but set the odds in your favor.</p>
+<h2 id="you-want-a-green-grid-like-this">You want a green grid like this:</h2>
+<p><img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516673450/github-green_wl2gys.png" alt=""></p>
+<h1 id="boxes-green-every-day">BOXES! Green... every day</h1>
+<h3 id="2-document-your-projects">2. Document your projects</h3>
+<p>You will forget how you created some things. You will actually temporarily forget how you coded some things and you will marvel that the code you pushed up, is actually yours. It doesn't have to be a ton of info, but at least capture the little tidbits about configuration, or how a Gem behaves, or error messages you battled. Help the Universe by capturing this stuff, and it will also become great blog meat (yes, I said it: &quot;blog meat&quot;). So, write little summaries of your projects, start with editing README files.</p>
+<h3 id="3-create-your-own-glossary-or-bookmarks-folder-to-capture-the-deluge-of-information-for-now-and-future">3. Create your own glossary or bookmarks folder to capture the deluge of information for now and future</h3>
+<p>I have a huge list of bookmarks. It is not highly organized but at least I have a way to quickly capture ideas that I encounter, and I try to put them in folders where I can find them in the future. I will be turning a portion of my site into a curation / library / wiki of all the stuff I've collected. I got this idea from a great teacher who encouraged the building of your own glossary from day one.</p>
+<p>In my case, I am building a little factory like this:</p>
+<ol>
+<li>Bookmark</li>
+<li>Do &quot;hello world&quot; example of it</li>
+<li>Do an actual project with it</li>
+<li>Outline it for a blog post, including
+-Title
+-Summary
+-Major points
+-Examples
+-Main Point
+-Conclusion</li>
+</ol>
+<h3 id="3a-blog-with-a-modular-app-built-like-the-%22bookmark-helloworld-project-blog%22-machine">3a: Blog with a modular app built like the &quot;bookmark-helloWorld-project-blog&quot; machine</h3>
+<p>Create an app with a data model that represents the parts of a blog.
+Start filling in the buckets as you encounter juicy subjects.
+It does not have to be complex, but why not use our knowledge of Sinatra and Rails to create modular blog material?
+My current blog data model is as follows:</p>
+<pre class="hljs"><code><div> create_table <span class="hljs-string">"posts"</span>, <span class="hljs-symbol">force:</span> <span class="hljs-symbol">:cascade</span> <span class="hljs-keyword">do</span> <span class="hljs-params">|t|</span>
+  t.date     <span class="hljs-string">"date"</span>
+  t.string   <span class="hljs-string">"title"</span>
+  t.string   <span class="hljs-string">"repo"</span>,       <span class="hljs-symbol">default:</span> <span class="hljs-string">"enter_full_URL_or_leave_blank"</span>
+  t.string   <span class="hljs-string">"video_url"</span>
+  t.string   <span class="hljs-string">"site_url"</span>
+  t.text     <span class="hljs-string">"summary"</span>,    <span class="hljs-symbol">default:</span> <span class="hljs-string">"summary_blank"</span>
+  t.text     <span class="hljs-string">"content_md"</span>,    <span class="hljs-symbol">default:</span> <span class="hljs-string">"blank_md"</span>
+  t.text     <span class="hljs-string">"content_html"</span>,    <span class="hljs-symbol">default:</span> <span class="hljs-string">"blank_html"</span>
+  t.datetime <span class="hljs-string">"created_at"</span>,                                           <span class="hljs-symbol">null:</span> <span class="hljs-literal">false</span>
+  t.datetime <span class="hljs-string">"updated_at"</span>,                                           <span class="hljs-symbol">null:</span> <span class="hljs-literal">false</span>
+<span class="hljs-keyword">end</span>
+</div></code></pre>
+<h3 id="3b-blog-in-your-favorite-text-editor-with-markdown-syntax">3b: Blog in your favorite text editor with Markdown syntax</h3>
+<p>As you can tell, I am a little clumsy with this right now, because I can't format things as pretty in VSCODE as I can in a Word doc. But the benefit is that I am living and working in my coding environment, using all the cool keyboard short cuts I know to get around, while I blog, while I improve my blog site, which is a Rails app, which I've published on Heroku with my own domain name. So I'm using 'gravity' to my advantage, not straying far from the tools of my trade. And USING the tools of my trade in my every day life as much as possible.</p>
+<p>It's like remembering to bring something when you leave the house. You put it in a shopping back and hang it on the door knob, so you know you'll run into it when you leave. If I'm constantly coding, blogging, developing with the tools I use as a professional developer, I'm putting &quot;mundane&quot; tasks to use constantly improving my skills.
+So the command line becomes second nature.
+Repos, git commands, commits, branches, become second nature.
+And, the more this happens, the less interference between inspiration to working code.</p>
+<h4 id="use-the-gem-rails-erd-to-create-an-erd-entity-relationship-diagram-of-your-data-model">Use the gem 'rails-erd' to create an (ERD) Entity Relationship Diagram of your data model:</h4>
+<p><img src="https://res.cloudinary.com/smithwebtek/image/upload/c_scale,w_347/v1516678229/blog-data-model_rxdqj1.png" alt=""></p>
+<h4 id="4-take-5-10-seconds-to-read-your-code-again-just-before-you-run-a-test">4. Take 5-10 seconds to read your code again ...just before you run a test</h4>
+<p>Form your own expectation of the results before you run a test.
+Form an opinion first, it creates a 'teaching moment'.</p>
+<p>Observe some things about this:<br>
+1. You lose less mental energy when you have reached some kind of conclusion about what should happen, even when incorrect. I love it when I take the time to proofread after several edits, and I think through each line, catching typos. It helps me stay &quot;proactive&quot; or &quot;active&quot; towards my effort, and less like a victim struggling through a dense forest. I think we don't stop enough and get our own mind thinking through what the code is doing. Forcing yourself to write code from only your memory is also a way to jumpstart your mind. It is worth it to test yourself and see how much you can actually produce on your own, through logic and deduction.</p>
+<pre><code>2. If it fails, you are in a better position to have another, more refined opinion, and probably one that is closer to the solution, better than if you simply threw something against the wall to see if it would stick. The more you can develop this thoughtful approach, the more you will learn, from both code that works and code that blows up. 
+
+3. If you can develop the patience to read, form an opinion and actually read the error...
+....you will be closer to confronting the root cause, sooner.
+  (software and computers, as designed, are perfect)
+  (almost 100% of the time, there is a completely valid reason why something is not happening as you expect)
+  (I find this very comforting, to remove the emotion, side-step the frustration and see it as a machine.)
+
+4. Most applications have a few processes to trace...(not hundreds). 
+  for example:
+  -The data usually starts somewhere, moves somewhere, is transformed somehow, rendered somewhere and eventually returned somewhere
+
+  -Variables are usually declared, are of a certain type, are populated somehow, get used somewhere, and are &quot;in scope&quot; at some point, and &quot;out of scope&quot; at another point. 
+
+  -Configuration can be tricky, especially with things that are new or with highly evolving documentaion. 
+    But even then, there IS a way that configuration works, and we just have to find it. 
+    Again, having an opinion, logically reached, helps us find our way through it. 
+</code></pre>
+<h4 id="the-opposite-is-what-i-call-%22squirrel-coding%22">The opposite is what I call &quot;squirrel coding&quot;</h4>
+<p>The squirrel is not that smart, just because he picked away at the garbage can until the lid happened to fall off, doesn't mean he actually knows how to open the can. We don't want to have to code like a squirrel &quot;trying whatever&quot; until we swerve into the solution. God forbid the test passes and you don't know why!</p>
+<p>Start with the small, simple, basic &quot;hello world&quot; level of something new and difficult.
+Say to yourself what you expect it do to.
+Read your code over again before compiling, running, executing, etc.
+Try to catch errors in your thoughts before you just hit the button and try it.
+Get to the point where you really expect your code to work before you test.</p>
+<h3 id="5-code-along-with-videos">5. Code along with videos</h3>
+<p>But keep your head in the game by actually typing everything, don't get passive.
+Code along with everything the presenter is doing, but as soon as you have a sense of what they'll code next, STOP the video and see how far you can get on your own. Then when you resume play, the video will mean far more.
+This requires a personal motivation / fire in the belly, which will reap big rewards.</p>
+<h3 id="6-create-your-own-folder-system">6. Create your own folder system</h3>
+<pre><code>Store experimental code and labs in sections and categories that make sense to you.
+Own this material, by filing it away on your system, so you can retreive it. 
+As you visit or revisit a topic, create little summaries that could be the seeds of a blog post.
+I think we should blog not just for publishing to the world, but simply to organize our own heads.
+</code></pre>
+<h3 id="7-create-your-own-naming-conventions-or-adopt-some-and-use-them">7. Create your own naming conventions, or adopt some and use them.</h3>
+<p>This promotes consistency in your thinking and code.
+And it forms habits that will serve you in the future when you have to regenerate your brain.
+These are all byproducts of 'owning' the learning process.</p>
+<p>Meaningful names last longer in a project, it is worth the time to create good names.
+You will be typing these names hundreds of times while you code, so the more they are organic, short, easy to spell and easy to PLURALIZE, the better.</p>
+<h3 id="8-reach-out-and-talk-to-other-people">8. Reach out and talk to other people</h3>
+<p>You have no idea how powerful it is to have your burden shared even for a moment with other like minded souls. This is one of the valuable parts of Flatiron, setting it apart from the other schools. My personal belief is that it began with Avi Flombaum's spirit of teaching, heart for coding and raw talent. I am so grateful he decided to do a school instead of a million other things he could have done with the last 5 years. And, I believe that he inherited some of this attitude from <a href="https://en.wikipedia.org/wiki/Yukihiro_Matsumoto">Matz</a>, &quot;Matz is nice, so we are nice&quot;.</p>
+<h3 id="9-help-someone-else-every-day">9. Help someone else every day</h3>
+<p>Helping other people is actually very helpful to oneself. Most of the time, it is not technical in nature. You don't have to be an expert, to ask simple questions about clarifying code. You might just help the other person jog their memory as they explain the problem.  <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Be a duck</a>.
+I think that at least half of it is that you are bearing their burden with them even if for a brief time. As a result that they are strengthened enough to keep moving. Build up their strength so they can start forming their own opinions, starting from something verifiably true, testing and forming another opinion.</p>
+<h3 id="10-ask-people-end-users-civilians-what-they-wish-their-software-could-do">10. Ask people (end users, civilians) what they wish their software could do</h3>
+<p>Ultimately we are about making the world a better place, through our talents as developers. Who better to ask than people around us who are frustrated with how their software meets their needs.</p>
+<p><a href="https://www.smartpassiveincome.com/podcasts/no-ideas-no-expertise-no-money-business/">this article and podcast</a> captures this idea very well.</p>
+<p><em>funny story that happened recently:</em></p>
+<p>I was at a meetup recently where a group of developers had a long discussion about what kind of app we could produce as a volunteer group for our community. The conversation wandered and settled on the loudest person in the room (where most devs are a little shy, the loudest voice takes on more meaning than it sometimes deserves). The consensus for an app became focused on this person's opinion that we needed an app to track &quot;pot holes&quot; in the street and possibly a feature to track whether someone had left dog droppings without cleaning it up. ( we'll pause while I give a sigh... )</p>
+<p>Now, we live in a city where there are about 50 drug overdose deaths monthly. As I listened, it occured to me that we should ask the local police, fire, hospital, EMT workers if there was some way we could help them by developing an application. Perhaps I was not loud enough about this idea, but it did seem to register with many of the other attendees. My point:  ASK USERS WHAT THEY NEED, instead of living in your own head when imagining what the app should do.  Focus on the problems of your users, instead of broadcasting your features! Features are only useful if a user has a problem first, that is solved by that feature.</p>
+<h3 id="problem-knowledge-vs-product-knowledge">Problem Knowledge vs Product Knowledge</h3>
+<p>In any development effort, you are faced with a long list of &quot;nice to haves&quot;, &quot;wish lists&quot;, etc. As I used to say to sales people:  STOP broadcasting your product knowledge. Your awareness of the client's PROBLEM is far more important than any PRODUCT knowledge you have of features and benefits.</p>
+<p>Users do not care that you have a thousand ways to code something. They have a limited budget, time and attention span to determine if you can actually solve their problem or not, before they move on to find the person who actually does understand their problem. This applies whether you are in a cutting edge startup, working for the most mundane of governmental departments or having a meeting with the local girl scouts to plan their site.</p>
+<p>But then maybe people do want a &quot;dog poo app&quot;, as was suggested in the meetup earlier.</p>
+<p><em>...and we're moving on</em></p>
+<h2 id="12-do-quantity-as-well-as-quality">12. DO QUANTITY as well as quality</h2>
+<p>I find with music students and students of piano tuning, that sometimes they just need to DO MORE. Repetition of skills to the point where they become deeper in your mind ( and deeper into your hands physically ) produces higher levels of everything. With piano, you practice things physically until your body becomes a conduit for musical ideas and emotions. You practice the language parts (scales, melodies, chord harmony positions) until you think on a higher plane about all of it.</p>
+<p>My first piano tuning took me 6 hours of intense work, after 6 months of practice 4-6 hours per day to get to that point. My mentor told me that I could not charge for my service until I could tune a whole piano in 2hours, and until I had tuned 1000 pianos at the music school first.</p>
+<p>My sense is that we'll all have this kind of trajectory in our growth as developers. I have built over 25 working Rails applications and about 20 working React apps. I've scratched the surface, but even in this effort I can start to think about Rails application possibilities on a higher level than I did when I was just learning to cobble things together and stumbling over every form, method, partial, route and configuration.</p>
+<p>As a consultant in the past, I worked with different organizations on issues they had with sales, delivery and project management. I found that most sales people had one of three problems:
+1. Not talking to the right people
+2. Talking to the right people, but not saying the right things.
+3. Talking to the right people, saying the right things, but not talking to ENOUGH right people.</p>
+<p>So, the point.... do more, code more, there are huge benefits from producing not only quality, but QUANTITY.<br>
+And, on that same point...
+When you do a project, do 3 or 4 very similar object types for your data, which will force some repetition in to your project build, simply because you have multiple data groups to deal with. For example, my last project (a music teaching studio app), had Students, Teachers, Resources and Lessons.  This forced me to repeat a lot of code that was very similar for the four data groupings, further deepening my understanding of the code involved.</p>
+<p>Had I only scraped my way through one data grouping, I would not have had nearly as rich a learning experience.</p>
+<h3 id="13-make-your-own-list-like-this">13. Make your own list like this</h3>
+<p>Everyone has insights along these lines. Make your own list and let us all read your blog so we can adopt some of your ideas  too!</p>
+
+</body>
+</html>

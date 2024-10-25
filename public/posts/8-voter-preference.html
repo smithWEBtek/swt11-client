@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>8-voter-preference.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="summary">Summary</h2>
+<p>This app provides a live clickable map for voters to indicate their voting preference. The user can either enter their address in a form and have it geocoded to the map, or vice-versa, they can click on the map to populate the address form. Once the form is completed, the user can choose from 3 options:  Support, Oppose or Undecided. The voter preference will then be stored in the database, with an appropriate map marker colored by their choice:</p>
+<p>Yellow  = Undecided
+Red = Oppose
+Green = Support</p>
+<p>A live reloading D3 bar chart represents the current counts of the 3 voter preference groups.</p>
+<h2 id="configuration-and-setup">Configuration and Setup</h2>
+<ul>
+<li>
+<p>Ruby version: 2.4.4</p>
+</li>
+<li>
+<p>System dependencies: Gemfile contains required dependencies.</p>
+</li>
+<li>
+<p>Configuration:</p>
+<ul>
+<li>This is a Rails app in API mode, to provide data for the Voter Preference app.</li>
+</ul>
+</li>
+<li>
+<p>Database creation:</p>
+<ul>
+<li>Postgresql requires database creation, which is included in a custom rake tasks below.</li>
+</ul>
+</li>
+<li>
+<p>Database initialization:</p>
+<ul>
+<li>
+<p>To create the database, migrate the tables, seed the database and start your local Rails server, please run:
+<code>$ rake db:dcms</code></p>
+</li>
+<li>
+<p>see this task here: <code>app/lib/tasks/dcms.rake</code></p>
+</li>
+<li>
+<p>To do the same steps after deployment to Heroku, please run:
+<code>$ rake db:hdcms</code></p>
+</li>
+<li>
+<p>see this task here: <code>app/lib/tasks/hdcms.rake</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>How to run the test suite</p>
+<ul>
+<li>Currently there is not a test suite</li>
+</ul>
+</li>
+<li>
+<p>Services (job queues, cache servers, search engines, etc.)</p>
+</li>
+<li>
+<p>Deployment instructions</p>
+<ul>
+<li>The app is comprised of 2 github repositories, 1 for the client, and 1 for the api.</li>
+</ul>
+<p><a href="https://github.com/smithWEBtek/voter-preference-client">CLIENT</a></p>
+<p><a href="https://github.com/smithWEBtek/voter-preference-api">API</a></p>
+</li>
+</ul>
+<h2 id="setup-notes">Setup notes</h2>
+<ul>
+<li>
+<p><code>index.html</code> has required dependencies in CDN link tags</p>
+</li>
+<li>
+<p>the Leaflet JavaScript library is included as physical files in the directory structure, (but could also be a CDN link if preferred).</p>
+</li>
+<li>
+<p><code>index.html</code> has script tag link to <code>map.js</code></p>
+</li>
+<li>
+<p>the files <code>composer.json</code> and <code>index.php</code> are present for ease of deployment to Heroku, otherwise these 2 files have no functional effect on the app.</p>
+</li>
+<li>
+<p><code>Bulma</code> is used as a css library for ease of quick deployment, with a responsive, clean layout</p>
+</li>
+<li>
+<p><code>map.css</code> has any custom css that is required</p>
+</li>
+<li>
+<p>Here.com is used for geocoding and reverse geocoding</p>
+</li>
+<li>
+<p>D3 is used for live data visualization</p>
+</li>
+</ul>
+<h2 id="display">Display</h2>
+<p>The <code>index.html</code> page has 4 areas:</p>
+<ol>
+<li><code>nav bar</code></li>
+<li><code>map div</code></li>
+<li><code>voter preference form</code></li>
+<li><code>D3 data visualization bar chart</code></li>
+</ol>
+<h2 id="voter-interaction-flow">Voter Interaction Flow</h2>
+<ol>
+<li>
+<p>The <code>app response div</code>, shows Voter prompts &amp; app responses</p>
+</li>
+<li>
+<p>The map is centered on Boston geocode with zoom level 12
+<code>([42.358056, -71.063611], 12)</code></p>
+</li>
+<li>
+<p>The <code>confirm address</code> button is grayed out, non-functional until the form contains a validated street address.</p>
+</li>
+<li>
+<p>The <code>voter preference form</code> is grayed out and not functional until an API validated, Voter-accepted address appears in the <code>address form</code>, (which activates the <code>voter preference form</code> (step #7).</p>
+</li>
+<li>
+<p>The Voter is prompted with 2 options for address validation with a default message in the <code>app response div</code></p>
+<p>OPTION 1: ENTER ADDRESS in <code>address form</code></p>
+<ul>
+<li>The address is auto-completed as the Voter types, using an API call to the <code>here.com</code> api.</li>
+<li>Voter chooses correct address from API responses, or</li>
+<li>Voter continues editing the <code>address form</code> until the api returns a valid address.</li>
+<li>Voter clicks <code>confirm address</code> button.</li>
+<li>Valided address appears in the <code>address validation div</code>.</li>
+</ul>
+<p>OPTION 2: MAP-ZOOM-CLICK on address location</p>
+<ul>
+<li>Voter clicks map and coordinates are captured by JavaScript.</li>
+<li>An API call is made to HERE.com to find a street address that is closest to, and within 150 meters of, the &quot;Voter-clicked&quot; location coordinates.</li>
+<li>The Voter accepts the returned street address by clicking <code>Confirm Address</code> button.</li>
+<li>The Voter rejects the returned address and is prompted to ENTER ADDRESS or MAP-ZOOM-CLICK on location</li>
+<li>Voter clicks <code>confirm address</code> button.</li>
+<li>Required section of the address form turns GREEN</li>
+</ul>
+</li>
+<li>
+<p>When a valid address appears in the  <code>address validation div</code>:</p>
+<ul>
+<li>A JavaScript class Object of <code>Voter</code> is instantiated with the validated address and geocode information.</li>
+<li>The <code>voter preference form</code> is activated and javascript starts listening for the <code>Submit Preference</code> button click</li>
+</ul>
+</li>
+<li>
+<p>Voter Submit Preference</p>
+<ul>
+<li>Voter clicks radio button in <code>voter preference form</code></li>
+<li>support / opppose / undecided</li>
+</ul>
+</li>
+<li>
+<p>The Voter Object is updated with the chosen preference and saved to the PostgreSQL database.</p>
+</li>
+<li>
+<p>The map is updated with a colored map point icon based on the Voter's preference</p>
+<ul>
+<li>Green = Support</li>
+<li>Red = Oppose</li>
+<li>Yellow = Undecided</li>
+</ul>
+</li>
+</ol>
+<h2 id="views">Views</h2>
+<ul>
+<li>
+<p>The app includes 3 views including Boston, New England and US national view.</p>
+</li>
+<li>
+<p>The map displays the entire voter database table, with markers colored by the preference of each individual voter</p>
+</li>
+<li>
+<p>A D3 bar graph shows a visual representation of the data</p>
+</li>
+</ul>
+
+</body>
+</html>
