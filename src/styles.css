@@ -225,6 +225,39 @@ body {
   flex-grow: 1;
 }
 
+/* Posts */
+
+.posts-container {
+  width: 30%;
+}
+
+.posts-title {
+  color: rgb(12, 53, 12);
+  font-size: x-large;
+  margin: 1rem 0;
+  text-decoration: underline;
+}
+
+.post-card-title {
+  color: rgb(4, 4, 11);
+}
+
+.post-card {
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 6px;
+  background-color: #fbfeff;
+  padding: 2px 0 8px 4px;
+  height: auto;
+}
+
+
+.post-summary {
+  color: rgb(80, 80, 96);
+  margin-left: 1rem;
+}
+
+
+
 /* Profile Section */
 .profile {
   display: flex;
