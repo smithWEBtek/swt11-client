@@ -10,7 +10,7 @@ const Prototypes = ({ filename = data, setHtmlContent }) => {
   const prototypeCard = (prototype) => {
     return (`
       <div>
-        <a href=${prototype.href} class="prototype-card">
+        <a href=${prototype.href} class="prototype-card" target="_blank" rel="noreferrer">
           <img class="prototype-image object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src='${prototype.image}' alt=${prototype.alt}>
           <div class="flex flex-col">
             <h5 class="prototype-title mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${prototype.title}</h5>

@@ -30,13 +30,5 @@
     "description": "Demo app for tracking carbon emission reduction for a community.",
     "image": "/images/prototypes/cooler.png",
     "alt": "Cooler Communities site"
-  },
-  {
-    "title": "Pool Service Management",
-    "url": "<a href='https://poolservice.smithwebtek.com' alt='netflix genres' target='_blank' rel='noreferrer' />",
-    "href": "https://poolservice.smithwebtek.com",
-    "description": "Demo app for tracking pool service business with two retails locations and seven service trucks.",
-    "image": "/images/prototypes/poolservice.png",
-    "alt": "pool service site"
   }
 ]

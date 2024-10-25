@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "date": "2016-01-12",
+    "title": "Why Learn To Code?",
+    "repo": "",
+    "video_url": "",
+    "site_url": "",
+    "summary": "limitations of physical work vs unlimited opportunities with coding",
+    "content_md": "001-career-change.md"
+  },
+  {
+    "id": 2,
+    "date": "2017-04-12",
+    "title": "Piano Search CLI",
+    "repo": "https://github.com/smithWEBtek/piano_search",
+    "video_url": "https://www.youtube.com/embed/A_jb0Iv6pEE",
+    "site_url": "",
+    "summary": "scrape Craigslist for 2 specific models of Yamaha piano",
+    "content_md": "002-piano-search.md"
+  },
+  {
+    "id": 3,
+    "date": "2016-03-12",
+    "title": "Music Student CMS",
+    "repo": "https://github.com/smithWEBtek/piano-teach2",
+    "video_url": "https://www.youtube.com/embed/-gYpibTzQH8?rel=0",
+    "site_url": "",
+    "summary": "Sinatra app for managing teachers and students",
+    "content_md": "003-music-student.md"
+  },
+  {
+    "id": 4,
+    "date": "2017-05-07",
+    "title": "Diet Planner v8",
+    "repo": "https://github.com/smithWEBtek/diet-planner-v8",
+    "video_url": "https://www.youtube.com/embed/YT8r_w4AifI",
+    "site_url": "https://diet-planner.smithwebtek.com/",
+    "summary": "Rails API w/ jQuery, AJAX, JSON front end",
+    "content_md": "005-diet-planner-v8.md"
+  },
+  {
+    "id": 5,
+    "date": "2018-01-19",
+    "title": "Music Studio",
+    "repo": "https://github.com/smithWEBtek/piano-student-api",
+    "video_url": "https://www.youtube.com/embed/Mm1hf_AJSsY",
+    "site_url": "https://github.com/smithWEBtek/swt.git",
+    "summary": "Rails API w/ JavaScript/React/Redux front end",
+    "content_md": "006-music-studio.md"
+  },
+  {
+    "id": 6,
+    "date": "2018-01-23",
+    "title": "Habits",
+    "repo": "",
+    "video_url": "",
+    "site_url": "",
+    "summary": "Habits of a successful developer",
+    "content_md": "007-habits.md"
+  },
+  {
+    "id": 7,
+    "date": "2018-03-20",
+    "title": "Rails app seed data",
+    "repo": "",
+    "video_url": "",
+    "site_url": "",
+    "summary": "Planning your data model, building your seed file.",
+    "content_md": "008-data-model.md"
+  },
+  {
+    "id": 8,
+    "date": "2019-01-21",
+    "title": "Voter Preference Map",
+    "repo": "",
+    "video_url": "",
+    "site_url": "",
+    "summary": "Voter Preference App: README.",
+    "content_md": "009-voter-preference.md"
+  },
+  {
+    "id": 9,
+    "date": "2019-08-17",
+    "title": "Study Strategy",
+    "repo": "",
+    "video_url": "",
+    "site_url": "",
+    "summary": "Study Strategy",
+    "content_md": "010-study-strategy.md"
+  },
+  {
+    "id": 10,
+    "date": "2021-05-15",
+    "title": "Contractor Onboarding",
+    "repo": "",
+    "video_url": "",
+    "site_url": "",
+    "summary": "Contractor Onboarding",
+    "content_md": "011-contractor-onboarding.md"
+  },
+  {
+    "id": 11,
+    "date": "2021-06-04",
+    "title": "Essential Learning Concepts",
+    "repo": "",
+    "video_url": "",
+    "site_url": "",
+    "summary": "Essential Learning Concepts",
+    "content_md": "012-essential-learning-concepts.md"
+  }
+]
