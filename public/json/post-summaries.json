@@ -3,110 +3,110 @@
     "id": 1,
     "date": "2016-01-12",
     "title": "Why Learn To Code?",
+    "filename": "1-career-change.md",
     "repo": "",
     "video_url": "",
     "site_url": "",
-    "summary": "physical work vs opportunities in coding",
-    "content_md": "001-career-change.md"
+    "summary": "physical work vs opportunities in coding"
   },
   {
     "id": 2,
     "date": "2017-04-12",
     "title": "Piano Search CLI",
+    "filename": "2-piano-search.md",
     "repo": "https://github.com/smithWEBtek/piano_search",
     "video_url": "https://www.youtube.com/embed/A_jb0Iv6pEE",
     "site_url": "",
-    "summary": "web scraping Craigslist for Yamaha pianos",
-    "content_md": "002-piano-search.md"
+    "summary": "web scraping Craigslist for Yamaha pianos"
   },
   {
     "id": 3,
     "date": "2016-03-12",
     "title": "Music Student CMS",
+    "filename": "3-music-student.md",
     "repo": "https://github.com/smithWEBtek/piano-teach2",
     "video_url": "https://www.youtube.com/embed/-gYpibTzQH8?rel=0",
     "site_url": "",
-    "summary": "Sinatra app for teachers and students",
-    "content_md": "003-music-student.md"
+    "summary": "Sinatra app for teachers and students"
   },
   {
     "id": 4,
     "date": "2017-05-07",
     "title": "Diet Planner v8",
+    "filename": "4-diet-planner-v8",
     "repo": "https://github.com/smithWEBtek/diet-planner-v8",
     "video_url": "https://www.youtube.com/embed/YT8r_w4AifI",
     "site_url": "https://diet-planner.smithwebtek.com/",
-    "summary": "Rails API, jQuery front end",
-    "content_md": "005-diet-planner-v8.md"
+    "summary": "Rails API, jQuery front end"
   },
   {
     "id": 5,
     "date": "2018-01-19",
     "title": "Music Studio",
+    "filename": "5-music-studio.md",
     "repo": "https://github.com/smithWEBtek/piano-student-api",
     "video_url": "https://www.youtube.com/embed/Mm1hf_AJSsY",
     "site_url": "https://github.com/smithWEBtek/swt.git",
-    "summary": "Rails API Javascript/React front end",
-    "content_md": "006-music-studio.md"
+    "summary": "Rails API Javascript/React front end"
   },
   {
     "id": 6,
     "date": "2018-01-23",
     "title": "Habits",
+    "filename": "6-habits.md",
     "repo": "",
     "video_url": "",
     "site_url": "",
-    "summary": "Successful dev habits",
-    "content_md": "007-habits.md"
+    "summary": "Successful dev habits"
   },
   {
     "id": 7,
     "date": "2018-03-20",
     "title": "Rails app seed data",
+    "filename": "7-data-model.md",
     "repo": "",
     "video_url": "",
     "site_url": "",
-    "summary": "Plan your data model, build your seed file.",
-    "content_md": "008-data-model.md"
+    "summary": "Plan your data model, build your seed file."
   },
   {
     "id": 8,
     "date": "2019-01-21",
     "title": "Voter Preference Map",
+    "filename": "8-voter-preference.md",
     "repo": "",
     "video_url": "",
     "site_url": "https://voter.smithwebtek.com",
-    "summary": "vote on a clickable map",
-    "content_md": "009-voter-preference.md"
+    "summary": "vote on a clickable map"
   },
   {
     "id": 9,
     "date": "2019-08-17",
     "title": "Study Strategy",
+    "filename": "9-study-strategy.md",
     "repo": "",
     "video_url": "",
     "site_url": "",
-    "summary": "Study strategies",
-    "content_md": "010-study-strategy.md"
+    "summary": "Study strategies"
   },
   {
     "id": 10,
     "date": "2021-05-15",
     "title": "Contractor Onboarding",
+    "filename": "10-contractor-onboarding.md",
     "repo": "",
     "video_url": "",
     "site_url": "",
-    "summary": "Onboarding as a contractor",
-    "content_md": "011-contractor-onboarding.md"
+    "summary": "Onboarding as a contractor"
   },
   {
     "id": 11,
     "date": "2021-06-04",
     "title": "Essential Learning Concepts",
+    "filename": "11-essential-learning-concepts.md",
     "repo": "",
     "video_url": "",
     "site_url": "",
-    "summary": "Essential learning concepts",
-    "content_md": "012-essential-learning-concepts.md"
+    "summary": "Essential learning concepts"
   }
 ]
