@@ -38,7 +38,8 @@ List of routes:
 
 ### Concept for the app
 
-![](https://res.cloudinary.com/smithwebtek/image/upload/v1516500349/music-student_pnmwbr.png?raw=true)
+![](https://res.cloudinary.com/smithwebtek/image/upload/f_auto,q_auto/v1/music-studio/w76zm5tq63gqcb6n0odc)
+
 The idea was to create a music studio CRM and teaching tool, incorporating Students, Teachers, Resources and Lessons
 Teachers can quickly add/remove Resource(s) to a Lesson, all interlinked and defined for the Student (and Teacher)
 3 types of Resources are instantly rendered in a custom Resource Viewer accessible to Teacher and Student.
@@ -384,7 +385,8 @@ The daily/weekly onslaught of constantly learning new languaes, syntax, configur
 ##SCREEN SHOTS:
 
 #music-student-main-page
-![](https://res.cloudinary.com/smithwebtek/image/upload/v1516500349/music-studio/music-student_pnmwbr.png)
+
+![](https://res.cloudinary.com/smithwebtek/image/upload/f_auto,q_auto/v1/music-studio/w76zm5tq63gqcb6n0odc)
 
 ---
 

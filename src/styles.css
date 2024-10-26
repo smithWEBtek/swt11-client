@@ -226,39 +226,43 @@ body {
 }
 
 /* Posts */
-
-.posts-container {
-  width: 30%;
+.postlinks-container {
+  border: 1px solid red;
+  width: 300px;
+  box-sizing: border-box;
+  min-height: 100px;
 }
 
-.posts-title {
+.postlinks-container-title {
   color: rgb(12, 53, 12);
   font-size: x-large;
   margin: 1rem 0;
   text-decoration: underline;
 }
 
-.post-card-title {
+.postlink-card {
+  cursor: pointer;
+  border: 1px solid rgb(81, 107, 156);
+  border-radius: 6px;
+  padding: 2px 0 8px 4px;
+  margin-bottom: 2px;
+  height: auto;
+
+  &:hover {
+    background-color: rgb(226, 252, 215);
+  }
+}
+
+.postlink-card-title {
   color: rgb(0, 0, 0);
   font-weight: 500;
 }
 
-.post-card {
-  border: 1px solid rgb(201, 201, 201);
-  border-radius: 6px;
-  background-color: #fbfeff;
-  padding: 2px 0 8px 4px;
-  height: auto;
-}
-
-
-.post-summary {
+.postlink-card-subtitle {
   color: rgb(80, 80, 96);
   margin-left: 4px;
   font-size: 14px;
 }
-
-
 
 /* Profile Section */
 .profile {

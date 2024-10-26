@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4-diet-planner.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h4 id="rails-with-jquery-assessment">Rails with jQuery Assessment</h4>
+<p>This post is an overview of the assignment to create a jQuery front end to an existing Rails app.</p>
+<p>My choice was the Diet-Planner application, which tracks Users' Diets, Foods, Meals, Logs in a
+Rails app with a Postgresql backend, authorization via Devise and other goodies.
+The app is currently <a href="https://diet-planner.smithwebtek.com">on Ubuntu 18.04 Digital Ocean here</a></p>
+<h4 id="key-points">Key Points</h4>
+<p>The app has the common functionality of index, show, edit, new, create, update, destroy for all models.
+The data model is shown in this <a href="https://res.cloudinary.com/smithwebtek/image/upload/v1494192278/diet-tracker/diet-planner-v8/erd.pdf">ERD diagram</a></p>
+<h4 id="the-data-model-is-summarized-as-follows">The data model is summarized as follows:</h4>
+<p>Users register and track their Diets, Meals, Calories and Log their experiences
+Users participate in groups of like-minded Dieters, to compare calories consumed, avg calories, etc.</p>
+<p>Data model
+Users
+Foods
+Groups
+Diets
+Meals
+Quotes</p>
+<h4 id="active-record-relationships">Active Record relationships</h4>
+<p>User has_many :meals
+belongs_to :diet</p>
+<p>Meal belongs_to :user
+belongs_to :food</p>
+<p>Food belongs_to :group
+has_many :meals</p>
+<p>Group has_many :foods</p>
+<p>Diet has_many :users</p>
+<p>Log belongs_to :user
+has_many :meals, through: :user</p>
+<pre><code>Quote belongs_to :celeb(celebrity), :verb, :adjective, :food, :diet, :phrase
+</code></pre>
+<p>The &quot;Quote&quot; model is where most of the required jQuery / AJAX / JSON functionality is done.</p>
+<h4 id="requirements">Requirements</h4>
+<p>The following specs were requirements, and I'll go through each one with a few examples of meeting the requirement.</p>
+<h4 id="use-jquery-for-implementing-new-requirements">Use jQuery for implementing new requirements</h4>
+<pre><code>*The following files use jQuery:
+	add_celeb_food_diet_phrase.js
+	index_and_show.js
+	quotes.js
+</code></pre>
+<h4 id="include-a-show-resource-rendered-using-jquery-and-an-active-model-serialization-json-backend">Include a show resource rendered using jQuery and an Active Model Serialization JSON backend.</h4>
+<pre><code>*The following active model objects have data rendered for show view:
+*User
+</code></pre>
+<h4 id="include-an-index-resource-rendered-using-jquery-and-an-active-model-serialization-json-backend">Include an index resource rendered using jQuery and an Active Model Serialization JSON backend.</h4>
+<pre><code>*The following active model objects have data rendered for index views:
+*Users, Meals, Mealnames, Foods, Groups, Diets
+</code></pre>
+<h4 id="include-at-least-one-hasmany-relationship-in-information-rendered-via-json-and-appended-to-the-dom">Include at least one has_many relationship in information rendered via JSON and appended to the DOM.</h4>
+<pre><code>*The following active model object is rendered with JSON, showing has_many relationships:
+*Users
+	-has_many :meals, :foods, :logs
+*The Users index is rendered via jQuery / AJAX / JSON.
+*The data shown is then linkeable for individual User, also via jQuery/AJAX/JSON
+</code></pre>
+<h4 id="include-at-least-one-link-that-loads-or-updates-a-resource-without-reloading-the-page">Include at least one link that loads or updates a resource without reloading the page.</h4>
+<pre><code>*The following active model objects are loaded or updated without reloading
+page: *Users, Meals, Mealnames, Foods, Groups, Diets *Random JSON Quotes,
+Random HTML Quotes, New Quote, Clear Quotes *Create Celeb, Create Food,
+Create Diet, Create Phrase -these items are saved to the database upon
+display, and available for inclusion in 'random quote generation'
+</code></pre>
+<h4 id="translate-json-responses-into-js-model-objects">Translate JSON responses into js model objects.</h4>
+<pre><code>*This is demonstrated with the 'New DropDown Quote' button and related code
+-the form and resulting Quote, is shown via AJAX, and save to the database
+*New CelebMeal -this is a JavaScript class CelebrityMeal, which is scripted
+within '/layouts/application.html.erb', because Heroku was not successfully
+finding the code.
+</code></pre>
+<h4 id="at-least-one-of-the-js-model-objects-must-have-at-least-one-method-added-by-your-code-to-the-prototype">At least one of the js model objects must have at least one method added by your code to the prototype.</h4>
+<pre><code>*this is demonstrated on the class CelebrityMeal, with a custom method
+'customQuote', which creates another unique Quote based on the values
+submitted in the form, all via jQuery/AJAX/JSON
+</code></pre>
+<h4 id="you-have-a-large-number-of-small-git-commits">You have a large number of small Git commits</h4>
+<pre><code>*As of this writing, the repo has 125 commits directly related to this version of the app.
+</code></pre>
+<h4 id="your-commit-messages-are-meaningful">Your commit messages are meaningful</h4>
+<pre><code>*All of the commit messages are meaningful in terms of what was accomplished with that commit
+</code></pre>
+<h4 id="you-made-the-changes-in-a-commit-that-relate-to-the-commit-message">You made the changes in a commit that relate to the commit message</h4>
+<pre><code>*While not 100%, the amount of changes related to commit messages is much higher than previous projects.
+*I still do have the tendency to jump around fixing things, vs staying focused on a single feature.
+</code></pre>
+<h4 id="you-dont-include-changes-in-a-commit-that-arent-related-to-the-commit-message">You don't include changes in a commit that aren't related to the commit message</h4>
+<pre><code>*Not 100% here, but far better than in previous projects.
+</code></pre>
+<h4 id="code-example">Code Example:</h4>
+<p>The following javascript file shows the current level of the programming.
+Much of it is verbose, using low-level AJAX methods, with repetitive explicit naming of functions.
+This is largely due to my newness at JavaScript, as well as the multiple moving pieces involved.
+It does make the code more readable and understandable.</p>
+<h5 id="essentially-there-are-the-following-types-of-functions">Essentially there are the following types of functions.</h5>
+<p>Functions that 'listen' for a particular element of the DOM (Document Object Model, or web page) to be clicked.
+Sometimes, they trigger other functions, or retrieve a form form the server to be filled by the User, like this:
+Example:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenForNewQuote</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#new_quote_button'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    e.stopImmediatePropagation()
+    e.preventDefault()
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'get'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/quotes/new'</span>
+    }).success(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+      clearResponseAreas()
+      $(<span class="hljs-string">'#response_area'</span>).html(response)
+      newQuote()
+    })
+  })
+}
+</div></code></pre>
+<p>Some functions watch 'buttons' or DOM elements, and when clicked, the 'listener'
+functions trigger internal server methods, such as this one which retrieves 5
+'random quotes', by sending a 'GET' request to a specific route in the Rails
+application. That route, points to a Controller, which fires a method, to
+produce the 5 random quotes and send them back to the waiting AJAX function, for
+display in the DOM.</p>
+<p>Example:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">quotesJSON</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#random_json_quotes'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'get'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/random_quotes'</span>,
+      <span class="hljs-attr">dataType</span>: <span class="hljs-string">'json'</span>,
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+        clearResponseAreas()
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = response.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+          $(<span class="hljs-string">'#response_area'</span>).append(response[i] + <span class="hljs-string">'&lt;br&gt;'</span>)
+        }
+      }
+    })
+    e.stopImmediatePropagation()
+    e.preventDefault()
+  })
+}
+</div></code></pre>
+<p>Some functions POST data to the server, mostly from forms filled by the User, to be saved to the database.
+Example:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newQuote</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#response_area form'</span>).on(<span class="hljs-string">'submit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    e.stopImmediatePropagation()
+    e.preventDefault()
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'post'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/quotes'</span>,
+      <span class="hljs-attr">data</span>: {
+        <span class="hljs-attr">authenticity_token</span>: $(<span class="hljs-string">"input[name='authenticity_token']"</span>).val(),
+        <span class="hljs-attr">quote</span>: {
+          <span class="hljs-attr">celeb</span>: $(<span class="hljs-string">'#quote_celeb'</span>).val(),
+          <span class="hljs-attr">verb</span>: $(<span class="hljs-string">'#quote_verb'</span>).val(),
+          <span class="hljs-attr">adj</span>: $(<span class="hljs-string">'#quote_adj'</span>).val(),
+          <span class="hljs-attr">food</span>: $(<span class="hljs-string">'#quote_food'</span>).val(),
+          <span class="hljs-attr">diet_id</span>: $(<span class="hljs-string">'#quote_diet_id'</span>).val(),
+          <span class="hljs-attr">phrase</span>: $(<span class="hljs-string">'#quote_phrase'</span>).val()
+        }
+      }
+    }).success(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+      clearResponseAreas()
+      $(<span class="hljs-string">'#response_area'</span>).html(response)
+    })
+  })
+}
+</div></code></pre>
+<p>Some functions trigger pre-planned Ruby methods, that produce data results, and
+display them. There are a few in this application: 1. Random JSON Quotes 2.
+Random HTML Quotes 3. DropDown Quotes 4. User Generated Quotes 5. Class based
+Quote, using JavaScript Object Model and method that adds to its prototype _ as
+opposed to writing out specific functionality in every script, the class object
+allows specific functionality to be added to the prototype (like a blueprint for
+an instance of the object). _ the example here is a class CelebrityMeal, which
+takes items from the database to construct an instance of 'CelebrityMeal'.Then,
+because the class Celebrity Meal was written with a method CustomQuote, we can
+call the customQuote function on any instance of CelebrityMeal, to get the
+displayed results. * this is demonstrated by clicking the button on home page:
+&quot;New CelebMeal&quot;</p>
+<p>Some functions simply clear out data from the DOM, to keep the user experience
+as expected, for example:</p>
+<p>Example:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clearResponseAreas</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#response_area'</span>).html(<span class="hljs-string">''</span>)
+  $(<span class="hljs-string">'#dropdown_quote_response_area'</span>).html(<span class="hljs-string">''</span>)
+  $(<span class="hljs-string">'#celeb_meal_response_area'</span>).html(<span class="hljs-string">''</span>)
+}
+</div></code></pre>
+<h5 id="full-script">full script:</h5>
+<pre class="hljs"><code><div>$(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  quotesJSON()
+  quotesHTML()
+  quotesClear()
+  listenForNewQuote()
+  listenForNewDropdownQuote()
+  newCelebMeal()
+  clearResponseAreas()
+})
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clearResponseAreas</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#response_area'</span>).html(<span class="hljs-string">''</span>)
+  $(<span class="hljs-string">'#dropdown_quote_response_area'</span>).html(<span class="hljs-string">''</span>)
+  $(<span class="hljs-string">'#celeb_meal_response_area'</span>).html(<span class="hljs-string">''</span>)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">quotesJSON</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#random_json_quotes'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'get'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/random_quotes'</span>,
+      <span class="hljs-attr">dataType</span>: <span class="hljs-string">'json'</span>,
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+        clearResponseAreas()
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = response.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+          $(<span class="hljs-string">'#response_area'</span>).append(response[i] + <span class="hljs-string">'&lt;br&gt;'</span>)
+        }
+      }
+    })
+    e.stopImmediatePropagation()
+    e.preventDefault()
+  })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">quotesHTML</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#random_html_quotes'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'get'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/random_quotes'</span>,
+      <span class="hljs-attr">dataType</span>: <span class="hljs-string">'html'</span>,
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+        clearResponseAreas()
+        $(<span class="hljs-string">'#response_area'</span>).append(response)
+      }
+    })
+    e.stopImmediatePropagation()
+    e.preventDefault()
+  })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">quotesClear</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#quotes_clear'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'get'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/clear_quotes'</span>
+    }).success(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      clearResponseAreas()
+    })
+    e.preventDefault()
+  })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenForNewQuote</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#new_quote_button'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    e.stopImmediatePropagation()
+    e.preventDefault()
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'get'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/quotes/new'</span>
+    }).success(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+      clearResponseAreas()
+      $(<span class="hljs-string">'#response_area'</span>).html(response)
+      newQuote()
+    })
+  })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newQuote</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#response_area form'</span>).on(<span class="hljs-string">'submit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    e.stopImmediatePropagation()
+    e.preventDefault()
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'post'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/quotes'</span>,
+      <span class="hljs-attr">data</span>: {
+        <span class="hljs-attr">authenticity_token</span>: $(<span class="hljs-string">"input[name='authenticity_token']"</span>).val(),
+        <span class="hljs-attr">quote</span>: {
+          <span class="hljs-attr">celeb</span>: $(<span class="hljs-string">'#quote_celeb'</span>).val(),
+          <span class="hljs-attr">verb</span>: $(<span class="hljs-string">'#quote_verb'</span>).val(),
+          <span class="hljs-attr">adj</span>: $(<span class="hljs-string">'#quote_adj'</span>).val(),
+          <span class="hljs-attr">food</span>: $(<span class="hljs-string">'#quote_food'</span>).val(),
+          <span class="hljs-attr">diet_id</span>: $(<span class="hljs-string">'#quote_diet_id'</span>).val(),
+          <span class="hljs-attr">phrase</span>: $(<span class="hljs-string">'#quote_phrase'</span>).val()
+        }
+      }
+    }).success(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+      clearResponseAreas()
+      $(<span class="hljs-string">'#response_area'</span>).html(response)
+    })
+  })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenForNewDropdownQuote</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#new_dropdown_quote_button'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    e.stopImmediatePropagation()
+    e.preventDefault()
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'get'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/new_dropdown_quote'</span>
+    }).success(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+      clearResponseAreas()
+      $(<span class="hljs-string">'#dropdown_quote_response_area'</span>).html(response)
+      newDropdownQuote()
+    })
+  })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newDropdownQuote</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#dropdown_quote_response_area form'</span>).on(<span class="hljs-string">'submit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    e.stopImmediatePropagation()
+    e.preventDefault()
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'post'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/new_dropdown_quote'</span>,
+      <span class="hljs-attr">data</span>: {
+        <span class="hljs-attr">authenticity_token</span>: $(<span class="hljs-string">"input[name='authenticity_token']"</span>).val(),
+        <span class="hljs-attr">quote</span>: {
+          <span class="hljs-attr">celeb_id</span>: $(<span class="hljs-string">'#quote_celeb_id'</span>).val(),
+          <span class="hljs-attr">verb_id</span>: $(<span class="hljs-string">'#quote_verb_id'</span>).val(),
+          <span class="hljs-attr">adj_id</span>: $(<span class="hljs-string">'#quote_adj_id'</span>).val(),
+          <span class="hljs-attr">food_id</span>: $(<span class="hljs-string">'#quote_food_id'</span>).val(),
+          <span class="hljs-attr">diet_id</span>: $(<span class="hljs-string">'#quote_diet_id'</span>).val(),
+          <span class="hljs-attr">phrase_id</span>: $(<span class="hljs-string">'#quote_phrase_id'</span>).val()
+        }
+      }
+    }).success(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+      clearResponseAreas()
+      $(<span class="hljs-string">'#dropdown_quote_response_area'</span>).html(response)
+    })
+  })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newCelebMeal</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#new_celeb_meal_button'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    e.stopImmediatePropagation()
+    e.preventDefault()
+    $.ajax({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'get'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">'/one_random_quote'</span>,
+      <span class="hljs-attr">dataType</span>: <span class="hljs-string">'json'</span>
+    }).success(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+      clearResponseAreas()
+      <span class="hljs-keyword">var</span> celeb = response.celeb.name
+      <span class="hljs-keyword">var</span> verb = response.verb.name
+      <span class="hljs-keyword">var</span> adj = response.adj.name
+      <span class="hljs-keyword">var</span> food = response.food.name
+      <span class="hljs-keyword">var</span> diet = response.diet.name
+      <span class="hljs-keyword">var</span> phrase = response.phrase.content
+      <span class="hljs-keyword">var</span> celebMeal = <span class="hljs-keyword">new</span> CelebrityMeal(celeb, verb, adj, food, diet, phrase)
+      $(<span class="hljs-string">'#celeb_meal_response_area'</span>).html(celebMeal.customQuote())
+    })
+  })
+}
+</div></code></pre>
+<h4 id="issues-overcome">Issues Overcome</h4>
+<p>I found the following challenges: _ Difficulty managing various moving parts _
+Rails Routes, Controllers, Views, Models, Methods and ActiveRecord relationships</p>
+<ul>
+<li>
+<p>these are all the things the provide Rails goodness, and require complete
+refresh of the web page to view - as you add functionality to the JavaScript
+side of things, you have to keep abreast of how Rails routes, processes and
+returns things. _ JavaScript: Having begun my programming with SQL Server, some
+HTML and some database scripting, I found Ruby to be a wonderful way to learn,
+because of its conversational nature. You can literally &quot;talk&quot; Ruby code as you
+reason through how things function. Add to that the Rails conventions and you
+begin to absorb the language intuitively. Your eyes and instincts begin to guide
+you through coding and troubleshooting. Sometimes you just get a hunch that a
+certain thing will work and it does; other times you sense a dead end and
+refactor. _ With JavaScript I do believe that intuition will come, but for me a
+little longer.</p>
+</li>
+<li>
+<p>However, my mileage may vary as this was my experience learning a 2nd
+programming language after immersion in the first. I think that the common
+threads of programming vernacular will start to guide me through new languages
+and that the learning curve will be easier than the first few. *Debugging
+JavaScript, Ajax, JSON within the Rails ecosystem can be complicated. But once
+you get through a few examples of the full data life cycle through js
+functions, in and back from Rails, navigating the DOM and keeping track of
+&quot;THIS&quot; as it changes state, there does seem to be a finite number of issues
+that are usually the culprit. My style is based on being a craftsman all of my
+life, so we learn by doing something many times. Brute will power and tenacity
+go a long way.</p>
+</li>
+</ul>
+<h4 id="what-i-found">What I Found</h4>
+<pre><code>* I found that sometimes it was not clear why certain JavaScript
+  functionality was breaking, or not refreshing, or just laying there on the
+  page unflinching when I expected it to clear, or update.
+
+* I found that if you type out your next few moves, deciding what you want
+  in functionality, things go better. Write psuedo code, simply dreaming out
+  loud as to what you want the code to do; then bite off a small chunk to
+  make it 'real' with simple working code.
+
+* I found that you are much better off doing multiple commits to github,
+  organizing your work so that your comment doesn't need to be huge, because
+  you are making commits often enough.
+
+ 1. Decide what you want to code
+ 2. Write down pseudo code explanation, organizing statements into somewhat
+    defined actions
+ 3. Bite off an easy part, make data appear somewhere, get a view to work,
+    get a method to return something.
+ 4. Hook one thing to another thing, simply displaying an intentional piece
+    of code/data.
+ 5. Take the time to name things consistently
+  - use instinctive names, brief but descriptive
+  - if you make several of things of similar type, be on the look out for
+    tidy naming conventions
+  - verbose, working, consistently named code...may not be sexy, but other
+    experienced coders will appreciate that they can 'get' what you wrote
+    quicker, so they can help you improve.
+  - verbose, working, consistently named code...gives the rest of the world
+    something tangible to work with, making YOU more 'workable with'
+
+* I found that you can make an entire Rails application DANCE BABY!, without
+  leaving the home page.
+</code></pre>
+<h4 id="summary">Summary</h4>
+<p>I'm looking forward to more with JavaScript, having just scratched the surface
+with this application. I see now why there are so many JavaScript frameworks out
+there, because of where it fits in web development, and the fact that you can
+slip it in anywhere. Rails conventions have made it far more scalable than if it
+was left to 'grow your own', same goes for JavaScript, so I'm looking forward to
+delving into React next.</p>
+
+</body>
+</html>

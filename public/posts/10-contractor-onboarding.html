@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10-contractor-onboarding.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="onboarding-as-a-contractor">Onboarding as a Contractor</h1>
+<h3 id="by-brad-smith">by Brad Smith</h3>
+<h2 id="intro">intro</h2>
+<p>This article covers some basics for onboarding with a new client team, as a software engineer contractor. We will look at the people, resources and dynamics involved in successful onboarding and provide thought points to reference as you onboard.</p>
+<h2 id="why-you-are-there">Why you are there</h2>
+<p>There are many reasons why contractor roles exist. Most of the time you are being brought in to solve a problem for the client, provide temporary staff augmentation or to be an added resource on a specific project. These are all happy reasons why a client would take on a contractor.</p>
+<p>Conversely, there are situations which are not so happy in their origin, due to issues within the client organization, unsuccessful projects, people leaving unexpectedly, or poor performance of “the last contractor we had ...&quot;.</p>
+<p>Whether the situation is a happy one or not, you have to navigate carefully, listen, watch, take good notes and balance your initiative with diplomacy.</p>
+<p>If you are introverted and less communicative by nature, there are deliberate actions you can take to facillitate communcation.</p>
+<h2 id="whos-who">Who's Who</h2>
+<p>Notice that we did not begin with “Whats's What”.
+Identifying the key players within your client organization is crucial, because you need to foster relationships for everything else that follows.</p>
+<p>Make a list of leadership, management, team leads, people with specific skills. Start watching their work styles, schedules and how they communicate. This will help you get in sync with them for crucial communication and collaboration. Further in this article I recommend keeping a &quot;dev log&quot;, and at least capturing the basic information about your client team.</p>
+<h2 id="get-set-up">Get Set Up</h2>
+<p>This is about getting setup to work, with repos, credentials, access, “add me to this or that”, channels, documentation and tribal knowledge.</p>
+<p>Obviously you can't work if these things are not in place. My experience is that there is no perfect onboarding, anywhere (if “perfect” means that you have everything needed, on hour one of day one). Embrace the unfamiliar. Keep track of the things you needed for being fully setup and ready-to-work.</p>
+<p>Reasons why:</p>
+<ul>
+<li>You need to be set up and working billable hours as soon as possible.</li>
+<li>You want to have everything needed to get setup on a new machine.</li>
+<li>You want to be ready to help onboard a colleague on the same project, and the client team will likely expect you to have retained that knowledge.</li>
+<li>Client teams are often deep into their code base for many months or years. It is difficult for them to see the project from a new person's eyes. Capturing the details of setup is a valuable contribution to your client team.</li>
+</ul>
+<h2 id="facts">Facts</h2>
+<pre><code>You will not have everything you need on day one. Be cool.
+</code></pre>
+<p>Nobody has complete documentation of the app, environment, business logic, you-name-it. You will have to ask for things, repeatedly, diplomatically without complaining.</p>
+<p>Onboarding a contractor helps reveal gaps in client documentation and processes. The more you can roll with it and keep working positively, the better.</p>
+<pre><code>If there is documentation, it's probably outdated. Again, be cool.
+</code></pre>
+<p>Be aware of client team dynamics. They might be stressed for many reasons. They might have had very little help when they started working there. You might be coming in to do something they were not able to do. Stay calm and present your requests as friendly and non-threatening as possible.</p>
+<h2 id="quick-wins">Quick Wins</h2>
+<p>The idea here is to get a positive result for your client as soon as possible.
+Obvious, right? This does not have to be a major release game-changing pull request.</p>
+<pre><code>If you “get” me, I automatically like you.
+</code></pre>
+<p>It is human nature to seek to be “understood”. As an outsider coming in to an organization, the one thing you can do is show respect and acknowledge others genuinely. Sincerely try to understand what people are saying and their feelings.</p>
+<pre><code>Help the Universe by understanding your fellow human being.
+</code></pre>
+<p>This enables frank communication and collaboration.
+It translates into a perception of competence, giving you the benefit of the doubt early on, but only if you are sincere in your efforts to understand others.</p>
+<p>Small wins that build the relationship:</p>
+<ul>
+<li>getting a closer communication with key players.</li>
+<li>showing that you are listening by the questions you ask</li>
+<li>getting clarity on resources, application flow, business rules, known issues</li>
+</ul>
+<p>Notice that the quick wins start with the people first. Be aware of where you stand with the client team. It is not enough to just code a solution.</p>
+<pre><code>Communicate reliably, even if you don't have perfect news.
+
+Don't make your client chase you for updates and status.
+</code></pre>
+<h2 id="the-tidy-question">The Tidy Question</h2>
+<p>This is about creating a solid question to ask a more experienced developer.
+Following the debugging points below will help you:</p>
+<ul>
+<li>
+<p>get clarity before you ask for time from another developer.</p>
+</li>
+<li>
+<p>stay focused on the errors and steps you've taken.</p>
+</li>
+<li>
+<p>be ready to get effective help when the opportunity arises.</p>
+<p>Most experienced people are happy to help you, especially if they can see you've tried.</p>
+</li>
+</ul>
+<h2 id="debugging-points">Debugging Points</h2>
+<p>When things are broken and I'm stuck, I use this five step process to get unstuck:</p>
+<ol>
+<li>goal:  My goal is _______</li>
+<li>errors: The error I get is ________</li>
+<li>tried: I have tried to ________</li>
+<li>positives: Positives are _______</li>
+<li>solution: The solution was ________</li>
+</ol>
+<p>goal:</p>
+<pre class="hljs"><code><div>I am trying to “get data from this endpoint”
+</div></code></pre>
+<p>errors:</p>
+<pre class="hljs"><code><div>An error occurred while installing libv8 (3.16.14.19), and Bundler cannot continue.
+Make sure that `gem install libv8 -v '3.16.14.19' --source 'http://rubygems.org/'` succeeds before
+bundling.
+
+Something is preventing me from running Ruby 2.3.7 on Mac OS Catalina
+</div></code></pre>
+<p>positives:</p>
+<pre class="hljs"><code><div>The front end client app is almost working.
+I was able to access the repo today.
+The database is running in the API and not showing errors
+I can reach data from the Rails console in the API
+</div></code></pre>
+<p>solutions:</p>
+<pre class="hljs"><code><div>Turns out that OpenSSL 1.1 was getting installed by Brew automatically.
+I used MacPorts to install version 1.0, which ruby 2.3.7 requires
+This allowed bundle to complete without errors
+</div></code></pre>
+<h2 id="fail-loudly">Fail Loudly</h2>
+<p>Seems counter-intuitive, right? It can actually help reveal issues in the app, spark conversations to clarify things and often helps the client team get clarity on goals with their end users. So this does mean that you delete the production database. It might be that you forge a working solution even if it is not elegant. You might do this just to prove a concept works, and to get feedback on how the client team would normally approach it.
+There is an old saying:  “you can't steer a parked car”. I would much rather go into a stand up meeting with something that works, even if it is ugly.</p>
+<h2 id="personality-matters">Personality Matters</h2>
+<p>Programmers are often introverted. Sometimes we need to adapt our communciation style to help another person communicate with us. It is ok to deliberately take actions that get you out of your shell and communicate on meetings. It is ok to “adapt” your communication deliberately.</p>
+<ul>
+<li>before a meeting, create talking points for yourself, e.g.: “things I want to get out of this meeting”</li>
+<li>questions you want to ask</li>
+<li>statements you want to convey</li>
+<li>issues to avoid (know when to shut up)</li>
+<li>relationships, e.g.: “I want to reassure James that I understand his issue”</li>
+<li>relationships, e.g.: “I want to praise Tina for her efforts on XYZ”</li>
+</ul>
+<p>The bullet points enable you to:</p>
+<ul>
+<li>quickly summarize things</li>
+<li>remember the essence of your point, allowing verbal improvisation</li>
+<li>keep grounded if you are shy about public speaking</li>
+</ul>
+<p>Watch for your openings. Sometimes an agenda is set in the beginning, where you can speak up and let others know that you have points you want to cover.</p>
+<h2 id="logs">Logs</h2>
+<p>Form the habit of a daily developer log. Make it simple enough that you use it without thinking too much.
+I use OneNote simply because it syncs so flawlessly on all my devices. I create simple two-column tables, living in logical pages and sections.</p>
+<p>The two column table allows me the most freedom to capture my development day, error messages, events, scripts, etc. I don't try to get too fancy with it, just a date in the left column and brain dump in the right column.</p>
+<p><img src="https://res.cloudinary.com/smithwebtek/image/upload/v1622724740/blog/dev-log.png" alt="&quot;dev-log&quot;"></p>
+<p>I also try to keep separate logs for:</p>
+<ul>
+<li>setup log
+<ul>
+<li>be ready to setup an entirely new machine if needed</li>
+<li>environment variables</li>
+<li>scripts</li>
+<li>urls to dev, test, staging, production</li>
+</ul>
+</li>
+<li>issues and solutions log
+<ul>
+<li>put things here that were blockers, or key breakthroughs to setup</li>
+<li>everyday errors go in the dev log</li>
+</ul>
+</li>
+<li>client info
+<ul>
+<li>about, business model, what they do</li>
+<li>who's who</li>
+<li>who can answer what</li>
+<li>instructions to access the building, or acct info, etc.</li>
+</ul>
+</li>
+</ul>
+<h2 id="conclusion">conclusion</h2>
+<ul>
+<li>Put people first, “seek first to understand” your client and their business.</li>
+<li>Record your setup steps, be cool if things are not 100% day one.</li>
+<li>Maintain logs for dev, client, setup, issues.</li>
+<li>Create thought points and speak up in meetings.</li>
+<li>Ask tidy questions of experienced devs.</li>
+</ul>
+
+</body>
+</html>
