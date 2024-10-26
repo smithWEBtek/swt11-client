@@ -9,7 +9,7 @@ const Bookmarks = ({ setHtmlContent }) => {
     const families = [];
     const urlsWithJavascript = [];
 
-    // Find the parents, which are children of 'tek', which has id of 871
+    // Find the parents, which are in the category of 'tek', which has id of 871
     const parents = data.filter(d => d.parentId === '871');
 
     // For each parent, build an object of {title: parent.title, children: [{title: child.title, url: child.url},...]}
@@ -32,7 +32,9 @@ const Bookmarks = ({ setHtmlContent }) => {
           }
         }
       });
-      families.push(family);
+      if (family.bookmarks.length > 0) {
+        families.push(family);
+      }
     });
 
     return families;
@@ -60,19 +62,19 @@ const Bookmarks = ({ setHtmlContent }) => {
   return (
     <div className='bookmarks-content'>
       <div className="canvas-title">bookmarks</div>
-      <Accordion defaultopen={[]}>
+      <Accordion>
         {families.map((family, index) => {
           const childBookmarks = family.bookmarks.map((child, childIndex) => (
-            <p key={childIndex} className="mb-2 text-gray-500 dark:text-gray-400">
+            <p key={childIndex} className="mb-2 text-gray-500 dark:text-gray-400 bookmark-child">
               <a href={child.url}>{child.title}</a>
             </p>
           ));
           return (
             <Accordion.Panel key={index}>
-              <Accordion.Title>
+              <Accordion.Title className="bookmark-topic">
                 {family.title}
               </Accordion.Title>
-              <Accordion.Content>
+              <Accordion.Content className="bookmark-children">
                 {childBookmarks}
               </Accordion.Content>
             </Accordion.Panel>

@@ -40,21 +40,12 @@ const MainContent = ({ page }) => {
       <div className="flex flex-grow">
         <SideBar content={sideBarContent} />
         <div className="flex flex-row flex-grow">
+          {page === 'projects' && <Projects filename={page} setHtmlContent={setProjectsContent} />}
+          {page === 'prototypes' && <Prototypes filename={page} setHtmlContent={setPrototypesContent} />}
           {page === 'bookmarks' && <Bookmarks setHtmlContent={setBookmarksContent} />}
-          {!page.includes(['projects', 'prototypes', 'blog']) &&
-            <Canvas content={canvasContentToRender()} />}
+          {page !== 'bookmarks' && <Canvas content={canvasContentToRender()} />}
         </div>
       </div>
-      {page === 'projects' && (
-        <>
-          <Projects filename={page} setHtmlContent={setProjectsContent} />
-        </>
-      )}
-      {page === 'prototypes' && (
-        <>
-          <Prototypes filename={page} setHtmlContent={setPrototypesContent} />
-        </>
-      )}
       <Footer />
     </div>
   );

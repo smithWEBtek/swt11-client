@@ -373,6 +373,7 @@ body {
   width: 80%;
   text-align: left;
   height: 8rem;
+  margin-bottom: 8px;
 }
 
 .prototype-card a {
@@ -517,6 +518,23 @@ body {
   color: rgb(12, 53, 12);
   font-size: large;
   margin-top: 12px;
+}
+
+.bookmark-topic {
+  font-weight: bold;
+  font-size: medium;
+  margin-top: 12px;
+}
+
+.bookmark-children {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 4px;
+}
+
+.bookmark-child:hover {
+  font-weight: bold;
 }
 
 /* Responsive Design */

@@ -909,6 +909,30 @@
 	"dateAddedLocal": "10/14/2024, 11:01:04 AM",
 	"dateAddedUTC": "2024-10-14T15:01:04.646Z"
 },{
+	"index": 8,
+	"title": "Square Careers",
+	"url": "https://careers.squareup.com/us/en",
+	"id": 3046,
+	"parentId": "2996",
+	"dateAddedLocal": "10/25/2024, 1:06:01 PM",
+	"dateAddedUTC": "2024-10-25T17:06:01.028Z"
+},{
+	"index": 9,
+	"title": "Block - Careers - Senior Software Engineer (Frontend), Services Audience",
+	"url": "https://block.xyz/careers/jobs/4179417008",
+	"id": 3047,
+	"parentId": "2996",
+	"dateAddedLocal": "10/25/2024, 1:32:01 PM",
+	"dateAddedUTC": "2024-10-25T17:32:01.675Z"
+},{
+	"index": 10,
+	"title": "10up Freelance | Contract Senior JavaScript Engineer | 10up | LinkedIn",
+	"url": "https://www.linkedin.com/jobs/view/4057322316/?trackingId=tjJdfEYlTyuOmNSnNIqDPw%3D%3D&refId=u08kx%2BZCRSeqO9QQC5LUzA%3D%3D&midToken=AQGOdUXfiwiYnA&midSig=0oRWW0lmCGXHs1&trk=eml-jobs_jymbii_digest-job_card-0-jobcard_body&trkEmail=eml-jobs_jymbii_digest-job_card-0-jobcard_body-null-3ihjr~m2p4cfkh~52-null-null&eid=3ihjr-m2p4cfkh-52&otpToken=MTcwYzFlZTExMTI3YzBjZWI1MjkwN2UzNGUxNmUzYjU4OWNlZDk0Mzk4YTQ4YTZiNzhjMjA4NmM0ODUyNTRmOWFkYTY4OGI4NmVjNmM1ODdkYzRkZDQwMjBkMDFjZTM1NzNjYWRhNmUyMGFkODYyYSwxLDE%3D",
+	"id": 3048,
+	"parentId": "2996",
+	"dateAddedLocal": "10/25/2024, 7:10:39 PM",
+	"dateAddedUTC": "2024-10-25T23:10:39.014Z"
+},{
 	"index": 5,
 	"title": "swt",
 	"id": 333,
@@ -4177,7 +4201,85 @@
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
 	"index": 9,
-	"title": "api-google-drive",
+	"title": "arel",
+	"id": 913,
+	"parentId": "871",
+	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
+	"dateAddedUTC": "2021-06-21T18:28:37.059Z"
+},{
+	"index": 0,
+	"title": "File: README — Documentation for rails/arel (master)",
+	"url": "http://www.rubydoc.info/github/rails/arel",
+	"id": 914,
+	"parentId": "913",
+	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
+	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
+},{
+	"index": 1,
+	"title": "The definitive guide to Arel, the SQL manager for Ruby - Jiří Pospíšil's blog",
+	"url": "https://jpospisil.com/2014/06/16/the-definitive-guide-to-arel-the-sql-manager-for-ruby.html",
+	"id": 915,
+	"parentId": "913",
+	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
+	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
+},{
+	"index": 2,
+	"title": "Composable SQL Queries in Rails Using Arel | Viget",
+	"url": "https://www.viget.com/articles/composable-sql-queries-in-rails-using-arel/",
+	"id": 916,
+	"parentId": "913",
+	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
+	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
+},{
+	"index": 3,
+	"title": "Creating Advanced Active Record DB Queries with Arel",
+	"url": "https://www.cloudbees.com/blog/creating-advanced-active-record-db-queries-arel/",
+	"id": 917,
+	"parentId": "913",
+	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
+	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
+},{
+	"index": 4,
+	"title": "How Arel Converts Ruby Queries Into SQL Statements",
+	"url": "https://www.cloudbees.com/blog/how-arel-converts-ruby-queries-into-sql-statements/",
+	"id": 918,
+	"parentId": "913",
+	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
+	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
+},{
+	"index": 5,
+	"title": "File: README — Documentation for arel (9.0.0)",
+	"url": "https://www.rubydoc.info/gems/arel",
+	"id": 919,
+	"parentId": "913",
+	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
+	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
+},{
+	"index": 10,
+	"title": "async",
+	"id": 920,
+	"parentId": "871",
+	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
+	"dateAddedUTC": "2021-06-21T18:28:37.060Z"
+},{
+	"index": 0,
+	"title": "Fetch API - Web APIs | MDN",
+	"url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+	"id": 921,
+	"parentId": "920",
+	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
+	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
+},{
+	"index": 1,
+	"title": "Body - Web APIs | MDN",
+	"url": "https://developer.mozilla.org/en-US/docs/Web/API/Body",
+	"id": 922,
+	"parentId": "920",
+	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
+	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
+},{
+	"index": 11,
+	"title": "aws",
 	"id": 923,
 	"parentId": "871",
 	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
@@ -4364,84 +4466,6 @@
 	"url": "https://www.dailysmarty.com/posts/steps-for-using-active-storage-to-upload-files-to-s3-with-ruby-on-rails",
 	"id": 946,
 	"parentId": "923",
-	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
-	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
-},{
-	"index": 10,
-	"title": "arel",
-	"id": 913,
-	"parentId": "871",
-	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
-	"dateAddedUTC": "2021-06-21T18:28:37.059Z"
-},{
-	"index": 0,
-	"title": "File: README — Documentation for rails/arel (master)",
-	"url": "http://www.rubydoc.info/github/rails/arel",
-	"id": 914,
-	"parentId": "913",
-	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
-	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
-},{
-	"index": 1,
-	"title": "The definitive guide to Arel, the SQL manager for Ruby - Jiří Pospíšil's blog",
-	"url": "https://jpospisil.com/2014/06/16/the-definitive-guide-to-arel-the-sql-manager-for-ruby.html",
-	"id": 915,
-	"parentId": "913",
-	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
-	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
-},{
-	"index": 2,
-	"title": "Composable SQL Queries in Rails Using Arel | Viget",
-	"url": "https://www.viget.com/articles/composable-sql-queries-in-rails-using-arel/",
-	"id": 916,
-	"parentId": "913",
-	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
-	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
-},{
-	"index": 3,
-	"title": "Creating Advanced Active Record DB Queries with Arel",
-	"url": "https://www.cloudbees.com/blog/creating-advanced-active-record-db-queries-arel/",
-	"id": 917,
-	"parentId": "913",
-	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
-	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
-},{
-	"index": 4,
-	"title": "How Arel Converts Ruby Queries Into SQL Statements",
-	"url": "https://www.cloudbees.com/blog/how-arel-converts-ruby-queries-into-sql-statements/",
-	"id": 918,
-	"parentId": "913",
-	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
-	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
-},{
-	"index": 5,
-	"title": "File: README — Documentation for arel (9.0.0)",
-	"url": "https://www.rubydoc.info/gems/arel",
-	"id": 919,
-	"parentId": "913",
-	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
-	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
-},{
-	"index": 11,
-	"title": "async",
-	"id": 920,
-	"parentId": "871",
-	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
-	"dateAddedUTC": "2021-06-21T18:28:37.060Z"
-},{
-	"index": 0,
-	"title": "Fetch API - Web APIs | MDN",
-	"url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
-	"id": 921,
-	"parentId": "920",
-	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
-	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
-},{
-	"index": 1,
-	"title": "Body - Web APIs | MDN",
-	"url": "https://developer.mozilla.org/en-US/docs/Web/API/Body",
-	"id": 922,
-	"parentId": "920",
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
@@ -8136,6 +8160,21 @@
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
 	"index": 74,
+	"title": "grep",
+	"id": 3041,
+	"parentId": "871",
+	"dateAddedLocal": "10/23/2024, 10:32:43 AM",
+	"dateAddedUTC": "2024-10-23T14:32:43.068Z"
+},{
+	"index": 0,
+	"title": "grep command in Unix/Linux - GeeksforGeeks",
+	"url": "https://www.geeksforgeeks.org/grep-command-in-unixlinux/",
+	"id": 3040,
+	"parentId": "3041",
+	"dateAddedLocal": "10/23/2024, 10:32:20 AM",
+	"dateAddedUTC": "2024-10-23T14:32:20.523Z"
+},{
+	"index": 75,
 	"title": "gulp",
 	"id": 1377,
 	"parentId": "871",
@@ -8150,7 +8189,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 75,
+	"index": 76,
 	"title": "hacking",
 	"id": 1379,
 	"parentId": "871",
@@ -8189,7 +8228,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 76,
+	"index": 77,
 	"title": "hash table",
 	"id": 1384,
 	"parentId": "871",
@@ -8204,7 +8243,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 77,
+	"index": 78,
 	"title": "heroku",
 	"id": 1386,
 	"parentId": "871",
@@ -8347,7 +8386,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 78,
+	"index": 79,
 	"title": "homebrew",
 	"id": 1404,
 	"parentId": "871",
@@ -8362,7 +8401,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 79,
+	"index": 80,
 	"title": "hosting",
 	"id": 1406,
 	"parentId": "871",
@@ -8441,7 +8480,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 80,
+	"index": 81,
 	"title": "html",
 	"id": 1416,
 	"parentId": "871",
@@ -8488,7 +8527,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 81,
+	"index": 82,
 	"title": "internet engineering",
 	"id": 1422,
 	"parentId": "871",
@@ -8519,7 +8558,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 82,
+	"index": 83,
 	"title": "jamstack",
 	"id": 1426,
 	"parentId": "871",
@@ -8542,7 +8581,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 83,
+	"index": 84,
 	"title": "java",
 	"id": 2584,
 	"parentId": "871",
@@ -8589,7 +8628,7 @@
 	"dateAddedLocal": "10/15/2023, 9:56:03 AM",
 	"dateAddedUTC": "2023-10-15T13:56:03.959Z"
 },{
-	"index": 84,
+	"index": 85,
 	"title": "java",
 	"id": 1429,
 	"parentId": "871",
@@ -8676,7 +8715,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 85,
+	"index": 86,
 	"title": "javascript",
 	"id": 1440,
 	"parentId": "871",
@@ -9364,7 +9403,7 @@
 	"dateAddedLocal": "10/14/2024, 10:19:38 AM",
 	"dateAddedUTC": "2024-10-14T14:19:38.072Z"
 },{
-	"index": 86,
+	"index": 87,
 	"title": "jquery",
 	"id": 1529,
 	"parentId": "871",
@@ -9395,14 +9434,14 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 87,
+	"index": 88,
 	"title": "js animations",
 	"id": 1533,
 	"parentId": "871",
 	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
 	"dateAddedUTC": "2021-06-21T18:28:37.111Z"
 },{
-	"index": 88,
+	"index": 89,
 	"title": "js-rotation",
 	"id": 1534,
 	"parentId": "871",
@@ -9489,7 +9528,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 89,
+	"index": 90,
 	"title": "jwt",
 	"id": 1545,
 	"parentId": "871",
@@ -9504,7 +9543,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 90,
+	"index": 91,
 	"title": "laravel",
 	"id": 1547,
 	"parentId": "871",
@@ -9519,7 +9558,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 91,
+	"index": 92,
 	"title": "linux",
 	"id": 1549,
 	"parentId": "871",
@@ -9558,7 +9597,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 92,
+	"index": 93,
 	"title": "lorem",
 	"id": 2197,
 	"parentId": "871",
@@ -9573,7 +9612,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 93,
+	"index": 94,
 	"title": "mac",
 	"id": 1554,
 	"parentId": "871",
@@ -9588,7 +9627,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 94,
+	"index": 95,
 	"title": "mailgun",
 	"id": 1556,
 	"parentId": "871",
@@ -9603,7 +9642,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 95,
+	"index": 96,
 	"title": "make-files",
 	"id": 1558,
 	"parentId": "871",
@@ -9618,7 +9657,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 96,
+	"index": 97,
 	"title": "markdown",
 	"id": 1560,
 	"parentId": "871",
@@ -9697,7 +9736,23 @@
 	"dateAddedLocal": "10/14/2024, 12:13:53 PM",
 	"dateAddedUTC": "2024-10-14T16:13:53.505Z"
 },{
-	"index": 97,
+	"index": 9,
+	"title": "React Markdown Examples. Sometimes you just want to use basic… | by Dimterion | Sep, 2024 | Medium",
+	"url": "https://medium.com/@dimterion/react-markdown-examples-372fa1b21c0c",
+	"id": 3044,
+	"parentId": "1560",
+	"dateAddedLocal": "10/25/2024, 7:27:09 AM",
+	"dateAddedUTC": "2024-10-25T11:27:09.675Z"
+},{
+	"index": 10,
+	"title": "remarkjs/react-markdown: Markdown component for React",
+	"url": "https://github.com/remarkjs/react-markdown?tab=readme-ov-file#options",
+	"id": 3045,
+	"parentId": "1560",
+	"dateAddedLocal": "10/25/2024, 8:33:01 AM",
+	"dateAddedUTC": "2024-10-25T12:33:01.283Z"
+},{
+	"index": 98,
 	"title": "mean-stack",
 	"id": 1569,
 	"parentId": "871",
@@ -9720,7 +9775,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 98,
+	"index": 99,
 	"title": "mechanize",
 	"id": 1572,
 	"parentId": "871",
@@ -9735,7 +9790,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 99,
+	"index": 100,
 	"title": "memoization",
 	"id": 1574,
 	"parentId": "871",
@@ -9750,7 +9805,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 100,
+	"index": 101,
 	"title": "mentors",
 	"id": 1576,
 	"parentId": "871",
@@ -9797,7 +9852,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 101,
+	"index": 102,
 	"title": "midi",
 	"id": 1582,
 	"parentId": "871",
@@ -9812,7 +9867,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 102,
+	"index": 103,
 	"title": "minify",
 	"id": 1584,
 	"parentId": "871",
@@ -9827,7 +9882,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 103,
+	"index": 104,
 	"title": "mobile",
 	"id": 1586,
 	"parentId": "871",
@@ -9874,14 +9929,14 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 104,
+	"index": 105,
 	"title": "monitoring",
 	"id": 2213,
 	"parentId": "871",
 	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
 	"dateAddedUTC": "2021-06-21T18:28:37.172Z"
 },{
-	"index": 105,
+	"index": 106,
 	"title": "mysql",
 	"id": 1592,
 	"parentId": "871",
@@ -10064,7 +10119,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 106,
+	"index": 107,
 	"title": "New folder",
 	"id": 2214,
 	"parentId": "871",
@@ -10079,7 +10134,7 @@
 	"dateAddedLocal": "6/23/2021, 8:47:13 AM",
 	"dateAddedUTC": "2021-06-23T12:47:13.340Z"
 },{
-	"index": 107,
+	"index": 108,
 	"title": "nginx",
 	"id": 1615,
 	"parentId": "871",
@@ -10102,7 +10157,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 108,
+	"index": 109,
 	"title": "node",
 	"id": 1618,
 	"parentId": "871",
@@ -10269,7 +10324,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 109,
+	"index": 110,
 	"title": "npm",
 	"id": 1639,
 	"parentId": "871",
@@ -10284,7 +10339,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 110,
+	"index": 111,
 	"title": "nvm",
 	"id": 1641,
 	"parentId": "871",
@@ -10299,7 +10354,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 111,
+	"index": 112,
 	"title": "olap",
 	"id": 1643,
 	"parentId": "871",
@@ -10354,7 +10409,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 112,
+	"index": 113,
 	"title": "omniauth",
 	"id": 1650,
 	"parentId": "871",
@@ -10369,7 +10424,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 113,
+	"index": 114,
 	"title": "onenote",
 	"id": 1652,
 	"parentId": "871",
@@ -10384,7 +10439,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 114,
+	"index": 115,
 	"title": "online coding",
 	"id": 1654,
 	"parentId": "871",
@@ -10407,7 +10462,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 115,
+	"index": 116,
 	"title": "openDataGraphQL",
 	"id": 1657,
 	"parentId": "871",
@@ -10510,7 +10565,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 116,
+	"index": 117,
 	"title": "paginate",
 	"id": 1670,
 	"parentId": "871",
@@ -10525,7 +10580,22 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 117,
+	"index": 118,
+	"title": "pandoc",
+	"id": 3043,
+	"parentId": "871",
+	"dateAddedLocal": "10/23/2024, 10:48:29 AM",
+	"dateAddedUTC": "2024-10-23T14:48:29.011Z"
+},{
+	"index": 0,
+	"title": "Pandoc - Pandoc User’s Guide",
+	"url": "https://pandoc.org/MANUAL.html#extension-citations",
+	"id": 3042,
+	"parentId": "3043",
+	"dateAddedLocal": "10/23/2024, 10:48:06 AM",
+	"dateAddedUTC": "2024-10-23T14:48:06.715Z"
+},{
+	"index": 119,
 	"title": "path",
 	"id": 1672,
 	"parentId": "871",
@@ -10540,7 +10610,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 118,
+	"index": 120,
 	"title": "pc",
 	"id": 1674,
 	"parentId": "871",
@@ -10555,7 +10625,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 119,
+	"index": 121,
 	"title": "pcloud",
 	"id": 1676,
 	"parentId": "871",
@@ -10570,7 +10640,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 120,
+	"index": 122,
 	"title": "pdf",
 	"id": 1678,
 	"parentId": "871",
@@ -10609,7 +10679,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 121,
+	"index": 123,
 	"title": "perl",
 	"id": 1683,
 	"parentId": "871",
@@ -10632,7 +10702,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 122,
+	"index": 124,
 	"title": "php",
 	"id": 1686,
 	"parentId": "871",
@@ -10663,7 +10733,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 123,
+	"index": 125,
 	"title": "point-of-sale",
 	"id": 1690,
 	"parentId": "871",
@@ -10854,21 +10924,21 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 124,
+	"index": 126,
 	"title": "postgis",
 	"id": 1714,
 	"parentId": "871",
 	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
 	"dateAddedUTC": "2021-06-21T18:28:37.127Z"
 },{
-	"index": 125,
+	"index": 127,
 	"title": "postgis",
 	"id": 2199,
 	"parentId": "871",
 	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
 	"dateAddedUTC": "2021-06-21T18:28:37.171Z"
 },{
-	"index": 126,
+	"index": 128,
 	"title": "postgresql",
 	"id": 1715,
 	"parentId": "871",
@@ -10899,7 +10969,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 127,
+	"index": 129,
 	"title": "postman",
 	"id": 1719,
 	"parentId": "871",
@@ -10914,7 +10984,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 128,
+	"index": 130,
 	"title": "presentation",
 	"id": 1721,
 	"parentId": "871",
@@ -10937,7 +11007,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 129,
+	"index": 131,
 	"title": "pry",
 	"id": 1724,
 	"parentId": "871",
@@ -10968,7 +11038,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 130,
+	"index": 132,
 	"title": "python",
 	"id": 1728,
 	"parentId": "871",
@@ -11143,7 +11213,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 131,
+	"index": 133,
 	"title": "qualtrics",
 	"id": 1750,
 	"parentId": "871",
@@ -11206,7 +11276,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 132,
+	"index": 134,
 	"title": "r",
 	"id": 1758,
 	"parentId": "871",
@@ -11245,7 +11315,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 133,
+	"index": 135,
 	"title": "R",
 	"id": 2200,
 	"parentId": "871",
@@ -11260,7 +11330,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 134,
+	"index": 136,
 	"title": "rails",
 	"id": 1763,
 	"parentId": "871",
@@ -11403,7 +11473,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 135,
+	"index": 137,
 	"title": "rails-action-cable",
 	"id": 1781,
 	"parentId": "871",
@@ -11426,7 +11496,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 136,
+	"index": 138,
 	"title": "rails-react-heroku",
 	"id": 1784,
 	"parentId": "871",
@@ -11473,7 +11543,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 137,
+	"index": 139,
 	"title": "rails-refinery-cms",
 	"id": 1790,
 	"parentId": "871",
@@ -11584,7 +11654,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 138,
+	"index": 140,
 	"title": "rails-tutorials",
 	"id": 1804,
 	"parentId": "871",
@@ -11623,7 +11693,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 139,
+	"index": 141,
 	"title": "rails-upgrade",
 	"id": 1809,
 	"parentId": "871",
@@ -11710,7 +11780,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 140,
+	"index": 142,
 	"title": "rails-validation",
 	"id": 1820,
 	"parentId": "871",
@@ -11749,7 +11819,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 141,
+	"index": 143,
 	"title": "rasberry-pi",
 	"id": 1825,
 	"parentId": "871",
@@ -11812,7 +11882,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 142,
+	"index": 144,
 	"title": "react",
 	"id": 1833,
 	"parentId": "871",
@@ -12155,7 +12225,7 @@
 	"dateAddedLocal": "10/14/2024, 6:57:20 PM",
 	"dateAddedUTC": "2024-10-14T22:57:20.223Z"
 },{
-	"index": 143,
+	"index": 145,
 	"title": "react-jsx",
 	"id": 1873,
 	"parentId": "871",
@@ -12186,7 +12256,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 144,
+	"index": 146,
 	"title": "react-redux",
 	"id": 1877,
 	"parentId": "871",
@@ -12337,7 +12407,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 145,
+	"index": 147,
 	"title": "react-testing-library",
 	"id": 2219,
 	"parentId": "871",
@@ -12352,7 +12422,7 @@
 	"dateAddedLocal": "2/5/2022, 7:50:24 PM",
 	"dateAddedUTC": "2022-02-06T00:50:24.891Z"
 },{
-	"index": 146,
+	"index": 148,
 	"title": "readme",
 	"id": 1896,
 	"parentId": "871",
@@ -12367,7 +12437,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 147,
+	"index": 149,
 	"title": "recursion",
 	"id": 1898,
 	"parentId": "871",
@@ -12382,7 +12452,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 148,
+	"index": 150,
 	"title": "refs",
 	"id": 1900,
 	"parentId": "871",
@@ -12517,7 +12587,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 149,
+	"index": 151,
 	"title": "regex",
 	"id": 1918,
 	"parentId": "871",
@@ -12652,7 +12722,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 150,
+	"index": 152,
 	"title": "resp mock",
 	"id": 2202,
 	"parentId": "871",
@@ -12731,7 +12801,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 151,
+	"index": 153,
 	"title": "responsive web design",
 	"id": 1935,
 	"parentId": "871",
@@ -12746,7 +12816,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 152,
+	"index": 154,
 	"title": "rspec",
 	"id": 1937,
 	"parentId": "871",
@@ -12825,7 +12895,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 153,
+	"index": 155,
 	"title": "ruby",
 	"id": 1947,
 	"parentId": "871",
@@ -13056,7 +13126,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 154,
+	"index": 156,
 	"title": "sandbox",
 	"id": 1976,
 	"parentId": "871",
@@ -13079,7 +13149,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 155,
+	"index": 157,
 	"title": "scraping",
 	"id": 1979,
 	"parentId": "871",
@@ -13126,7 +13196,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 156,
+	"index": 158,
 	"title": "scribd",
 	"id": 1985,
 	"parentId": "871",
@@ -13141,7 +13211,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 157,
+	"index": 159,
 	"title": "search",
 	"id": 1987,
 	"parentId": "871",
@@ -13164,7 +13234,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 158,
+	"index": 160,
 	"title": "seed",
 	"id": 1990,
 	"parentId": "871",
@@ -13179,7 +13249,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 159,
+	"index": 161,
 	"title": "seo",
 	"id": 1992,
 	"parentId": "871",
@@ -13202,7 +13272,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 160,
+	"index": 162,
 	"title": "sequelize",
 	"id": 1995,
 	"parentId": "871",
@@ -13217,7 +13287,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 161,
+	"index": 163,
 	"title": "shell",
 	"id": 1997,
 	"parentId": "871",
@@ -13232,7 +13302,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 162,
+	"index": 164,
 	"title": "sidekiq",
 	"id": 1999,
 	"parentId": "871",
@@ -13247,7 +13317,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 163,
+	"index": 165,
 	"title": "sinatra",
 	"id": 2001,
 	"parentId": "871",
@@ -13334,7 +13404,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 164,
+	"index": 166,
 	"title": "sinon",
 	"id": 2012,
 	"parentId": "871",
@@ -13365,7 +13435,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 165,
+	"index": 167,
 	"title": "sql-ms_sqlserver",
 	"id": 2016,
 	"parentId": "871",
@@ -13380,7 +13450,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 166,
+	"index": 168,
 	"title": "sql-server",
 	"id": 2018,
 	"parentId": "871",
@@ -13395,7 +13465,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 167,
+	"index": 169,
 	"title": "sql-sqllite3",
 	"id": 2020,
 	"parentId": "871",
@@ -13514,7 +13584,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 168,
+	"index": 170,
 	"title": "style",
 	"id": 2035,
 	"parentId": "871",
@@ -13529,7 +13599,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 169,
+	"index": 171,
 	"title": "surge",
 	"id": 2037,
 	"parentId": "871",
@@ -13552,7 +13622,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 170,
+	"index": 172,
 	"title": "swagger",
 	"id": 2040,
 	"parentId": "871",
@@ -13567,7 +13637,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 171,
+	"index": 173,
 	"title": "tags",
 	"id": 2042,
 	"parentId": "871",
@@ -13598,7 +13668,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 172,
+	"index": 174,
 	"title": "task managers",
 	"id": 2046,
 	"parentId": "871",
@@ -13637,7 +13707,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 173,
+	"index": 175,
 	"title": "testing",
 	"id": 2590,
 	"parentId": "871",
@@ -13692,7 +13762,7 @@
 	"dateAddedLocal": "10/29/2023, 10:02:39 AM",
 	"dateAddedUTC": "2023-10-29T14:02:39.307Z"
 },{
-	"index": 174,
+	"index": 176,
 	"title": "testing",
 	"id": 2051,
 	"parentId": "871",
@@ -13787,7 +13857,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 175,
+	"index": 177,
 	"title": "thoughtbot",
 	"id": 2062,
 	"parentId": "871",
@@ -13802,7 +13872,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 176,
+	"index": 178,
 	"title": "three-d",
 	"id": 872,
 	"parentId": "871",
@@ -13833,7 +13903,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 177,
+	"index": 179,
 	"title": "tools",
 	"id": 2064,
 	"parentId": "871",
@@ -13856,7 +13926,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 178,
+	"index": 180,
 	"title": "ui",
 	"id": 2067,
 	"parentId": "871",
@@ -13927,7 +13997,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 179,
+	"index": 181,
 	"title": "user-agent",
 	"id": 2076,
 	"parentId": "871",
@@ -13942,7 +14012,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 180,
+	"index": 182,
 	"title": "ux",
 	"id": 2078,
 	"parentId": "871",
@@ -13997,7 +14067,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 181,
+	"index": 183,
 	"title": "virtual box",
 	"id": 2085,
 	"parentId": "871",
@@ -14020,7 +14090,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 182,
+	"index": 184,
 	"title": "visualization",
 	"id": 2088,
 	"parentId": "871",
@@ -14059,7 +14129,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 183,
+	"index": 185,
 	"title": "vscode-snippets",
 	"id": 2093,
 	"parentId": "871",
@@ -14082,7 +14152,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 184,
+	"index": 186,
 	"title": "vue",
 	"id": 1526,
 	"parentId": "871",
@@ -14097,7 +14167,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 185,
+	"index": 187,
 	"title": "vue",
 	"id": 2096,
 	"parentId": "871",
@@ -14128,21 +14198,21 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 186,
+	"index": 188,
 	"title": "web packer",
 	"id": 2100,
 	"parentId": "871",
 	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
 	"dateAddedUTC": "2021-06-21T18:28:37.160Z"
 },{
-	"index": 187,
+	"index": 189,
 	"title": "web packer",
 	"id": 2212,
 	"parentId": "871",
 	"dateAddedLocal": "6/21/2021, 2:28:37 PM",
 	"dateAddedUTC": "2021-06-21T18:28:37.172Z"
 },{
-	"index": 188,
+	"index": 190,
 	"title": "webgl-workers",
 	"id": 2101,
 	"parentId": "871",
@@ -14173,7 +14243,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 189,
+	"index": 191,
 	"title": "window_manager",
 	"id": 2105,
 	"parentId": "871",
@@ -14196,7 +14266,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 190,
+	"index": 192,
 	"title": "windows programming",
 	"id": 2108,
 	"parentId": "871",
@@ -14267,7 +14337,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 191,
+	"index": 193,
 	"title": "wireframe",
 	"id": 2117,
 	"parentId": "871",
@@ -14354,7 +14424,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 192,
+	"index": 194,
 	"title": "xml",
 	"id": 2128,
 	"parentId": "871",
@@ -14369,7 +14439,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 193,
+	"index": 195,
 	"title": "zipcodes",
 	"id": 2130,
 	"parentId": "871",
@@ -14408,7 +14478,7 @@
 	"dateAddedLocal": "6/21/2021, 2:12:25 PM",
 	"dateAddedUTC": "2021-06-21T18:12:25.000Z"
 },{
-	"index": 194,
+	"index": 196,
 	"title": "zsh",
 	"id": 2848,
 	"parentId": "871",
@@ -14423,7 +14493,7 @@
 	"dateAddedLocal": "6/6/2024, 12:21:53 PM",
 	"dateAddedUTC": "2024-06-06T16:21:53.708Z"
 },{
-	"index": 195,
+	"index": 197,
 	"title": "chrome://net-internals/#hsts",
 	"url": "chrome://net-internals/#hsts",
 	"id": 2135,
