@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5-music-studio.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h3 id="this-post-summarizes-the-final-project-i-built-to-meet-the-graduation-requirements-for-the-flatiron-school-learn-verified-full-stack-web-developer-program">This post summarizes the final project I built to meet the graduation requirements for the Flatiron School (Learn Verified) Full Stack Web Developer program.</h3>
+<p>All of the requirements are met and then some.
+I took this project seriously and have done the best I can given my current skills.</p>
+<h3 id="requirements">REQUIREMENTS</h3>
+<p><input type="checkbox" id="checkbox5" checked="true"><label for="checkbox5">The code should be written in ES6 as much as possible</label>
+<input type="checkbox" id="checkbox4" checked="true"><label for="checkbox4">Uscreate-react-app generator to start your projec</label>
+<input type="checkbox" id="checkbox3" checked="true"><label for="checkbox3">Your app should have one HTML page to render your react-redux application</label>
+<input type="checkbox" id="checkbox2" checked="true"><label for="checkbox2">Tere should be 2 container components</label>
+Selected list of CONTAINERS: Lessons, Students, Teachers, Resources, LessonResources (and there are more )
+<input type="checkbox" id="checkbox1" checked="true"><label for="checkbox1">here should be 5 stateless components</label>
+Selected list of STATELESS FUNCTIONAL components: Student, Teacher, Resource, StudentService, TeacherService, ResourceService, LessonService ( among others )
+<input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0">There should be 3 routes</label></p>
+<p>List of routes:
+/students, /teachers, /resources, /lessons (for indexs of these data groups)
+/students/:id (for individual student)
+/students/:id/edit (for editing individual studen
+/teachers/:id (for individual teacher)
+/teachers/:id/edit (for editing individual teacher)
+/resources/:id (for individual resource)
+/resources/:i/editd (forediting individual resource)</p>
+<pre><code>  /lessons/:id (for individual lesson)
+  /lessons/:id /edit(for iediting ndividual lesson)
+</code></pre>
+<p><input type="checkbox" id="checkbox14" checked="true"><label for="checkbox14">use react-router and proper RESTful routing</label>
+<input type="checkbox" id="checkbox13" checked="true"><label for="checkbox13">use async actions to send data to and receive data from a server</label>
+<input type="checkbox" id="checkbox12" checked="true"><label for="checkbox12">Rails API should handle the data persistence.</label>
+<input type="checkbox" id="checkbox11" checked="true"><label for="checkbox11">You should be using fetch() within your actions to GET and [] POST data from your API</label>
+<input type="checkbox" id="checkbox10" checked="true"><label for="checkbox10">Do not use jQuery methods.</label>
+<input type="checkbox" id="checkbox9" checked="true"><label for="checkbox9">client-side application should handle the display of data with minimal data manipulation</label>
+<input type="checkbox" id="checkbox8" checked="true"><label for="checkbox8">app should have some minimal styling: feel free to stick to a framework (like react-bootstrap),</label>
+<input type="checkbox" id="checkbox7" checked="true"><label for="checkbox7">write (additional) CSS yourself if you wish</label>
+<input type="checkbox" id="checkbox6" checked="true"><label for="checkbox6">use Redux middleware to respond to and modify state change</label></p>
+<h3 id="concept-for-the-app">Concept for the app</h3>
+<p><img src="https://res.cloudinary.com/smithwebtek/image/upload/f_auto,q_auto/v1/music-studio/w76zm5tq63gqcb6n0odc" alt=""></p>
+<p>The idea was to create a music studio CRM and teaching tool, incorporating Students, Teachers, Resources and Lessons
+Teachers can quickly add/remove Resource(s) to a Lesson, all interlinked and defined for the Student (and Teacher)
+3 types of Resources are instantly rendered in a custom Resource Viewer accessible to Teacher and Student.
+TheResource Viewer uses stateless function components for each of the 3 Resource types 'pdf'=PDF, 'aud'=Audio, 'vid'=Video
+Rals API and Active Record provide data persistence, semantic layer and JSON data via the browser
+ActiveRecord associations and Rails Serializers provide complex and solid interleaving of data, at API endpoints
+React provides the framework to allow Javascript to play nicely with HTML and CSS
+Redux provides the management of the &quot;state&quot; of the data, as it comes and goes to the database via the API</p>
+<h3 id="regarding-%22state%22">Regarding &quot;state&quot;...</h3>
+<p>I chose to mix both Redux state and &quot;local&quot; state in some components.
+I learned it through research and I found that there are some things that do not need to be in the Redux state, such as:</p>
+<pre><code>- the temporary data someone types into a form before saving
+
+- the visibility status of a modal or presentational component
+
+- data that is massaged, grouped or staged prior to assembly before going to the database
+</code></pre>
+<h3 id="regarding-css">Regarding CSS...</h3>
+<p>I used 3 different methods for styling. - ReactStrap was helpful in providing a quick method to get components and data rendered in a decent view - CSS modules and the approach of creating dedicated CSS files matching files and folders of the project, made it easy to add custom CSS when I where I needed it, without having to build it all from scratch. There are timeswhen I absolutely
+insist on tweaking something visual. And there are times when I just want to throw in a component and have it work, while I grapple with some deeper thought and programming - Inline styles. God forbid, yes there are some places where I just wanted some quick styling without creating a css file, and without importing a reactstrap component.</p>
+<h3 id="example-of-custom-styles-for-buttons-delete-edit-save"># Example of custom styles for buttons DELETE, EDIT, SAVE:</h3>
+<pre class="hljs"><code><div><span class="hljs-selector-class">.ResourcesList</span> {
+  <span class="hljs-attribute">color</span>: black;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+
+<span class="hljs-selector-class">.Form</span> {
+  <span class="hljs-attribute">float</span>: left;
+  <span class="hljs-attribute">text-align</span>: left;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">60%</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">75</span>, <span class="hljs-number">67</span>, <span class="hljs-number">67</span>);
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Open Sans'</span>, sans-serif;
+}
+
+<span class="hljs-selector-class">.Danger</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">238</span>, <span class="hljs-number">84</span>, <span class="hljs-number">84</span>);
+}
+
+<span class="hljs-selector-class">.Edit</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">250</span>, <span class="hljs-number">233</span>, <span class="hljs-number">77</span>);
+}
+
+<span class="hljs-selector-class">.Success</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">92</span>, <span class="hljs-number">243</span>, <span class="hljs-number">150</span>);
+}
+
+<span class="hljs-selector-class">.FormInstructions</span> {
+  <span class="hljs-attribute">font-style</span>: italic;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">600</span>;
+}
+
+<span class="hljs-selector-class">.Disabled</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#c7c6c6</span>;
+  <span class="hljs-attribute">cursor</span>: not-allowed;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#ccc</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#888888</span>;
+}
+
+<span class="hljs-selector-tag">th</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">3%</span>;
+}
+
+<span class="hljs-selector-tag">td</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">10%</span>;
+}
+</div></code></pre>
+<h3 id="regarding-react">Regarding React</h3>
+<p>I hated it! Until I learned it. Now I really enjoy it.
+I am happy to have found a place to use Rails as an API while using React and Redux to make the single page client side rock!</p>
+<p>I have not learned Angular or VUEjs, but I can tell they are in my future. I am so excited at the idea of being able toput my creative ideas into practice through coding!</p>
+<h3 id="building-rails-api">Building Rails API</h3>
+<p>DATA MODEL, migrations, active record relationships and sample data:</p>
+<h3 id="teacher"># #TEACHER</h3>
+<p>attributes :id, :firstname, :lastname, :email
+has_many student has_many :lessons
+has_many :lesson_resources, through: :lessons
+has_many :resources, through: :lessons</p>
+<h3 id="student"># STUDENT</h3>
+<p>attributes :id, :firstname, :lastname, :email, :level, :teacher_id
+belongs_to :teac
+has_many :lessons
+has_many :resources, through: :lessons</p>
+<h3 id="lesson"># LESSON</h3>
+<p>attributes :id, :date, :notes, :teacher_id, :student_id, :student, :teacher
+belongs_to :teacher
+belongs_to :student
+has_many :lesson_resources
+has_many :resources, through: :lesson_resources</p>
+<h3 id="lessonresource"># LESSON_RESOURCE</h3>
+<p>attributes :id, :lesson_id, :resource_id
+belongs_to :lesson
+belongs_to :resource</p>
+<pre class="hljs"><code><div>  create_table "lesson_resources", force: :cascade <span class="hljs-keyword">do</span> |t|
+    t.integer <span class="hljs-string">"resource_id"</span>
+    t.integer <span class="hljs-string">"lesson_id"</span>
+    t.datetime <span class="hljs-string">"created_at"</span>, <span class="hljs-literal">null</span>: <span class="hljs-literal">false</span>
+    t.datetime <span class="hljs-string">"updated_at"</span>, <span class="hljs-literal">null</span>: <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">end</span>
+
+  create_table <span class="hljs-string">"lessons"</span>, <span class="hljs-keyword">force</span>: :<span class="hljs-keyword">cascade</span> <span class="hljs-keyword">do</span> |t|
+    t.date <span class="hljs-string">"date"</span>
+    t.string <span class="hljs-string">"notes"</span>
+    t.integer <span class="hljs-string">"teacher_id"</span>
+    t.integer <span class="hljs-string">"student_id"</span>
+    t.datetime <span class="hljs-string">"created_at"</span>, <span class="hljs-literal">null</span>: <span class="hljs-literal">false</span>
+    t.datetime <span class="hljs-string">"updated_at"</span>, <span class="hljs-literal">null</span>: <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">end</span>
+
+  create_table <span class="hljs-string">"resources"</span>, <span class="hljs-keyword">force</span>: :<span class="hljs-keyword">cascade</span> <span class="hljs-keyword">do</span> |t|
+    t.string <span class="hljs-string">"title"</span>
+    t.string <span class="hljs-string">"category"</span>
+    t.string <span class="hljs-string">"description"</span>
+    t.string <span class="hljs-string">"format"</span>
+    t.string <span class="hljs-string">"location"</span>
+    t.string <span class="hljs-string">"url"</span>, <span class="hljs-keyword">default</span>: <span class="hljs-string">"no_url_given"</span>
+    t.datetime <span class="hljs-string">"created_at"</span>, <span class="hljs-literal">null</span>: <span class="hljs-literal">false</span>
+    t.datetime <span class="hljs-string">"updated_at"</span>, <span class="hljs-literal">null</span>: <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">end</span>
+
+  create_table <span class="hljs-string">"students"</span>, <span class="hljs-keyword">force</span>: :<span class="hljs-keyword">cascade</span> <span class="hljs-keyword">do</span> |t|
+    t.string <span class="hljs-string">"firstname"</span>
+    t.string <span class="hljs-string">"lastname"</span>
+    t.string <span class="hljs-string">"email"</span>
+    t.integer <span class="hljs-string">"level"</span>
+    t.integer <span class="hljs-string">"teacher_id"</span>
+    t.datetime <span class="hljs-string">"created_at"</span>, <span class="hljs-literal">null</span>: <span class="hljs-literal">false</span>
+    t.datetime <span class="hljs-string">"updated_at"</span>, <span class="hljs-literal">null</span>: <span class="hljs-literal">false</span>
+</div></code></pre>
+<h3 id="user-experience"># User Experience</h3>
+<p><strong>Teacher</strong> has the ability to organize, view, create and assign multiple <strong>Resource(s)</strong> to <strong>Student</strong> via <strong>Lesson</strong>, from a central repository of <strong>Resources</strong>.</p>
+<p>Resources stored online based on Resource type</p>
+<pre><code>Audio: Soundcloud
+
+PDF: Cloudinary
+
+Image: Cloudinary
+
+Video: YouTube
+</code></pre>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>
+<span class="hljs-keyword">import</span> Pdf <span class="hljs-keyword">from</span> <span class="hljs-string">'./Pdf'</span>
+<span class="hljs-keyword">import</span> Vid <span class="hljs-keyword">from</span> <span class="hljs-string">'./Vid'</span>
+<span class="hljs-keyword">import</span> Aud <span class="hljs-keyword">from</span> <span class="hljs-string">'./Aud'</span>
+<span class="hljs-keyword">import</span> Aux <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../hoc/Aux/Aux'</span>
+<span class="hljs-keyword">import</span> Spinner <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../UI/Spinner/Spinner'</span>
+<span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">'./ResourceViewer.css'</span>
+
+<span class="hljs-keyword">const</span> ResourceViewer = <span class="hljs-function"><span class="hljs-params">props</span> =&gt;</span> {
+  <span class="hljs-keyword">let</span> renderResource = (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{styles.Center}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Spinner</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This resource has not been created yet. <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+
+  <span class="hljs-keyword">if</span> (
+    props.resource.format === <span class="hljs-string">'pdf'</span> &amp;&amp;
+    props.resource.url !== <span class="hljs-string">'no_url_given'</span>
+  ) {
+    renderResource = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Pdf</span> <span class="hljs-attr">url</span>=<span class="hljs-string">{props.resource.url}</span> /&gt;</span></span>
+  }
+
+  <span class="hljs-keyword">if</span> (
+    props.resource.format === <span class="hljs-string">'vid'</span> &amp;&amp;
+    props.resource.url !== <span class="hljs-string">'no_url_given'</span>
+  ) {
+    renderResource = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Vid</span> <span class="hljs-attr">url</span>=<span class="hljs-string">{props.resource.url}</span> /&gt;</span></span>
+  }
+
+  <span class="hljs-keyword">if</span> (
+    props.resource.format === <span class="hljs-string">'aud'</span> &amp;&amp;
+    props.resource.url !== <span class="hljs-string">'no_url_given'</span>
+  ) {
+    renderResource = (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Aux</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>{props.resource.title}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Aud</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">{props.resource}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Aux</span>&gt;</span></span>
+    )
+  }
+
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{renderResource}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ResourceViewer
+</div></code></pre>
+<p>Easy access to multiple resources while teaching.
+Add / remove resources to lessons</p>
+<p><strong>Students</strong> have real-time list of all assigned <strong>Resources</strong>
+<strong>Teachers</strong> see all of their <strong>Student(s)</strong>, <strong>Lesson(s)</strong> and all available <strong>Resource(s)</strong>
+<strong>Lesson</strong> can have multiple <strong>Resources</strong>, easy add / remove
+All data is inter-related through Active Record, surfaced by Rails API and Rails Serializers
+Add and Edit forms, are using Modals to enhance User Experience</p>
+<h3 id="building-basic-react-app"># Building basic React app</h3>
+<h3 id="folder-structure"># #Folder Structure</h3>
+<p>React Container / Component folder structure for the main 4 data groups is consistently named and organized.
+Each of the 4 groups has unique requirements for data and inter-relations with the other groups.
+Naming conventions for folders and javascript files follow Rails restful perspective.
+User Interface components are in a separate folder for reuse by any of the main component groups.</p>
+<h3 id="style-and-responsiveness"># #Style and Responsiveness</h3>
+<p>Styling is minimal, but clean through use of Reactstrap
+Beyond Reactstrap there are several customized css files, each paired and named the same as the files they serve.
+There are some global css styles in App.css, imported as &quot;appstyles&quot;.
+The layout is responsive, with the main menu collapsing into the 'hamburger' icon.</p>
+<h3 id="redux"># Redux:</h3>
+<p>All 4 major data groups have idential Redux actions, reducers and naming conventions
+As a result, it was easy to add a 5th major data group &quot;LessonResources&quot; which allowed the convenient feature of adding and
+removing Resources to a given Lesson.</p>
+<h3 id="middleware"># #Middleware</h3>
+<p>Thunk (middleware) is implemented to allow each of the 4 main data groups to have Start, Success, Fail phases for all CRUD
+operations with the AP</p>
+<h3 id="rails-api-serves-all-data-requirements-for-index-show-create-update-destroy-and-all-possible-groupings-availabe-through"># Rails API serves all data requirements for Index, Show, Create, Update, Destroy and all possible groupings availabe through</h3>
+<p>ActiveRecord associations.
+Serializers are used extensively to serve API data without any need for manipulation on the client side.
+In fact, one could surf all of the various data groups throught the JSON API available in the browser.</p>
+<h3 id="the-concept-of-the-site-is-to-bring-as-many-varied-resources-to-bear-on-the-student-as-possible-all-formats"># The concept of the site is to bring as many varied resources to bear on the student as possible, all formats.</h3>
+<p>PDF files showing musical notation and ideas are easily accessible through the ResourceViewer component which serves up stateless functional components based on Audio, Video, PDF formats (format field in Resource database table).
+The ResourcesList has functionality to show whether a Resource has a URL or not, disabling the SHOW button if so, based on the value in the URL field.
+Resources can therefore be added quickly, even if they don't have URL information.</p>
+<pre class="hljs"><code><div>{
+  resource.url === <span class="hljs-string">'no_url_given'</span> ? (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'button'</span> <span class="hljs-attr">className</span>=<span class="hljs-string">'Disabled'</span>&gt;</span>
+        empty
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+  ) : (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span>
+          <span class="hljs-attr">to</span>=<span class="hljs-string">{</span>`/<span class="hljs-attr">resources</span>/${<span class="hljs-attr">resource.id</span>}`}
+          <span class="hljs-attr">params</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">id:</span> <span class="hljs-attr">resource.id</span> }}
+          <span class="hljs-attr">key</span>=<span class="hljs-string">{resource.id}</span>
+          <span class="hljs-attr">onClick</span>=<span class="hljs-string">{props.close}</span>
+        &gt;</span>
+          show
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+  )
+}
+</div></code></pre>
+<h3 id="data"># Data:</h3>
+<p>A custom rake file was used throughout development to allow convenient data replenishin
+the command is <strong>rake db:dcms</strong></p>
+<h3 id="drop-create-migrate-seed--start"># #Drop, Create, Migrate, Seed / Start</h3>
+<p>This allows for confidence in data integrity while in the throes of development and debugging.
+The seed data is realistic and provides another layer of confidence during development.</p>
+<h3 id="cloudinary-httpscloudinarycom"># Cloudinary: https://cloudinary.com</h3>
+<p>Cloudinary is an excellent platform for storage and retrieval of digital artifacts, delivered to the site quickly like a CDN.
+Their API provides extensive manipulation of files for integration into the site, although for this project it was only used
+as means of storage and quick retrieval through custom URL's which currently hardcode in the seeds data file.
+Future versions of this app would allow automatic storage, manipulation and retreival of digital files, as an added
+convenience for Teachers and Students.</p>
+<h3 id="mockaroo-httpswwwmockaroocom"># Mockaroo: https://www.mockaroo.com</h3>
+<p>Mockaroo is a site where you can spin up dummy data quickly in formats that make sense with your application, and then
+available for quick download in many formats.</p>
+<h3 id="seedsrb"># Seeds.rb:</h3>
+<p>The seeds file for this project is based on a structure in one of the Learn curriculum labs, which I expanded upon to suit the needs for this project. My strong belief is that without seed data, and a solid data model, it is akin to building on sand versus a strong data foundation.
+Care was also taken in the choosing of names for data, folders and files, adhering to RESTful conventions as much as
+possible. Data names also are as organic as possible reflecting their day to day usage.</p>
+<h3 id="future"># Future:</h3>
+<p>I would like to explore the use of <strong>MIDI</strong> information in a 'play along' format for piano students. After nearly 2 years of hundreds of programming labs, where tests light up GREEN or RED, I believe it can be done in a similar fashion for piano students. The goal would be to capture the digital markers for a song, to use as a test measure.
+The student would then play their MIDI based keyboard along with the recorded sample track, while javasript functionality compares the student performance against the recorded sample (of course, alowing for human error, enough to encourage accuracy without bogging the student down in tedious musical theory early in their development.</p>
+<h3 id="observations-on-the-flatiron-journey"># Observations on the Flatiron journey:</h3>
+<p>I believe that much of software programming comes down to conceptualizing what needs to happen and then finding the language and syntax to bring it into physical reality. Debugging a difficult error always follows a pattern of mystery, clues, thought, experimentation and solution.</p>
+<p>People tend to bring their own personalities into whatever they do. Programming is no different. One has to confront their own emotions, personal inertia and adapt to the requirements of learning new languages. I have found that I work best coding along with superior programmers, followed by my own experimentation and brute force repetition of concepts until I have internalized them. My reading of material has improved greatly as a result of the Flatiron curriculum, because one is forced to think through problems, research / trial &amp; error to solve labs.</p>
+<p>My own history as a craftsperson pushes me to build projects and refine code instinctively. There is such a satisfaction in seeing code work in the browser especially when it does what you expected it to do!</p>
+<p>I've learned to be more patient with things I don't know, errors I don't understand and more patient with myself when I go completely blank momentarily forgetting basic things.</p>
+<p>The daily/weekly onslaught of constantly learning new languaes, syntax, configuration and idiosyncracies of every language gradually builds an internal mental toughness to absorb new things through all senses, not just the eyes and brain.</p>
+<h3 id="i-plan-to-use-my-skills-to-improve-my-own-life-my-familys-life-and-the-lives-of-my-clients-and-employers"># #I plan to use my skills to improve my own life, my family's life and the lives of my clients and employers.</h3>
+<h3 id="thank-you-for-reading-this-far"># THANK YOU for reading this far!</h3>
+<hr>
+<p>##SCREEN SHOTS:</p>
+<p>#music-student-main-page</p>
+<p><img src="https://res.cloudinary.com/smithwebtek/image/upload/f_auto,q_auto/v1/music-studio/w76zm5tq63gqcb6n0odc" alt=""></p>
+<hr>
+<p>#video-viewer
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502729/music-studio/video-viewer_v2ojt0.png" alt=""></p>
+<hr>
+<p>#students
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502729/music-studio/students_xs7x6g.png" alt=""></p>
+<hr>
+<p>#teachers
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502729/music-studio/teachers_mpgkjk.png" alt=""></p>
+<hr>
+<p>#teacher-add
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502729/music-studio/teacher-add_bmoojc.png" alt=""></p>
+<hr>
+<p>#lesson-resource-add
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502728/music-studio/lesson-resource-add_vvo9gs.png" alt=""></p>
+<hr>
+<p>#lesson-resource-remove
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516504373/music-studio/lesson-resource-remove_npiq4j.png" alt=""></p>
+<hr>
+<p>#student-add
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502728/music-studio/student-add_tfiovr.png" alt=""></p>
+<hr>
+<p>#resources
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502728/music-studio/resources_o3uwjt.png" alt=""></p>
+<hr>
+<p>#lessons
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502727/music-studio/lessons_mt6dvh.png" alt=""></p>
+<hr>
+<p>#lesson-add
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502727/music-studio/lesson-add_ziscfk.png" alt=""></p>
+<hr>
+<p>#pdf-viewer
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502727/music-studio/pdf-viewer_omotvd.png" alt=""></p>
+<hr>
+<p>#custom-spinner
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502726/music-studio/custom-spinner_ccjucv.png" alt=""></p>
+<hr>
+<p>#audio-viewer
+<img src="https://res.cloudinary.com/smithwebtek/image/upload/v1516502726/music-studio/audio-viewer_sow06l.png" alt=""></p>
+
+</body>
+</html>
