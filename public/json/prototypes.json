@@ -5,7 +5,9 @@
     "href": "https://movies.smithwebtek.com",
     "description": "Demo app for displaying Netflix genres, opens to your account to choose movie based on genre.",
     "image": "/images/prototypes/movies.png",
-    "alt": "Netflix genres site"
+    "alt": "Netflix genres site",
+    "git_repo": "https://github.com/smithWEBtek/movies-client",
+    "git_repo_api": "https://github.com/smithWEBtek/movies-api"
   },
   {
     "title": "Voter Map",
@@ -13,7 +15,9 @@
     "href": "https://voter.smithwebtek.com",
     "description": "Demo app for capturing live votes based on geo data in a clickable map with real time chart update.",
     "image": "/images/prototypes/voter.png",
-    "alt": "voter map site"
+    "alt": "voter map site",
+    "git_repo": "https://github.com/smithWEBtek/voter",
+    "git_repo_api": "https://github.com/smithWEBtek/voter-api"
   },
   {
     "title": "Music Studio",
@@ -21,7 +25,9 @@
     "href": "https://music-studio.smithwebtek.com",
     "description": "Music studio management app allows Teachers and Students to track of assigned Resources in a music Lesson with Resources in PDF, Audio and Video",
     "image": "/images/prototypes/musicstudio.png",
-    "alt": "music-studio site"
+    "alt": "music-studio site",
+    "git_repo": "https://github.com/smithWEBtek/music-studio-client",
+    "git_repo_api": "https://github.com/smithWEBtek/music-studio-api"
   },
   {
     "title": "Cooler Communities",
@@ -29,6 +35,8 @@
     "href": "https://cooler.smithwebtek.com",
     "description": "Demo app for tracking carbon emission reduction for a community.",
     "image": "/images/prototypes/cooler.png",
-    "alt": "Cooler Communities site"
+    "alt": "Cooler Communities site",
+    "git_repo": "https://github.com/MAPC/cooler-communities",
+    "git_repo_api": null
   }
 ]
