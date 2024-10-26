@@ -8,17 +8,22 @@ const Prototypes = ({ filename = data, setHtmlContent }) => {
   const [error, setError] = useState(null);
 
   const prototypeCard = (prototype) => {
+    const gitRepo = prototype.git_repo ? prototype.git_repo : null;
+    const gitRepoApi = prototype.git_repo_api ? prototype.git_repo_api : null;
+
     return (`
-      <div>
-        <a href=${prototype.href} class="prototype-card" target="_blank" rel="noreferrer">
-          <img class="prototype-image object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src='${prototype.image}' alt=${prototype.alt}>
-          <div class="flex flex-col">
-            <h5 class="prototype-title mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${prototype.title}</h5>
-            <p class="prototype-description mb-3 font-normal text-gray-700 dark:text-gray-400">${prototype.description}</p>
+          <div class="project-card">
+            <a href=${prototype.href} class="project-card">
+              <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src='${prototype.image}' alt=${prototype.alt}>
+            </a>
+            <div class="flex flex-col h-full">
+              <h5 class="project-title mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${prototype.title}</h5>
+              <p class="project-description mb-3 font-normal text-gray-700 dark:text-gray-400">${prototype.description}</p>
+              <p class="project-git-repo mt-auto"><i>github repo client: <a href=${gitRepo} target='_blank' rel='noreferrer'>${gitRepo || 'private'}</a></i></p>
+              <p class="project-git-repo mt-auto"><i>github repo api: <a href=${gitRepoApi} target='_blank' rel='noreferrer'>${gitRepoApi || 'private'}</a></i></p>
+            </div>
           </div>
-        </a>
-      </div>
-      `)
+        `)
   }
 
   useEffect(() => {

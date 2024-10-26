@@ -325,14 +325,14 @@ body {
 
 .project-card a {
   height: 150px;
-  margin-bottom: 4px;
+  margin-bottom: 1rem;
 }
 
 .project-card img {
   min-width: 180px;
 }
 
-.project-card:hover {
+.project-card img:hover {
   transform: scale(1.01);
   /* Slightly enlarge the card on hover */
 }
@@ -349,6 +349,18 @@ body {
   padding-left: 1rem;
   color: #000000;
   width: 100%;
+}
+
+.project-git-repo {
+  font-style: italic;
+  padding-left: 1rem;
+  color: #000000;
+
+  &:hover {
+    cursor: pointer;
+    /* transform: scale(1.1); */
+    text-shadow: 0 0 1px currentColor;
+  }
 }
 
 .project-details {
