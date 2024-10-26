@@ -7,7 +7,6 @@ import StaticHtmlRenderer from "../utils/StaticHtmlRenderer";
 import Bookmarks from '../Bookmarks/Bookmarks';
 import Projects from '../Projects/Projects';
 import Prototypes from '../Prototypes/Prototypes';
-import Blog from '../Blog/Blog';
 
 const MainContent = ({ page }) => {
   const html = StaticHtmlRenderer(`${page}.html`);
@@ -42,7 +41,6 @@ const MainContent = ({ page }) => {
         <SideBar content={sideBarContent} />
         <div className="flex flex-row flex-grow">
           {page === 'bookmarks' && <Bookmarks setHtmlContent={setBookmarksContent} />}
-          {page === 'blog' && <Blog />}
           {!page.includes(['projects', 'prototypes', 'blog']) &&
             <Canvas content={canvasContentToRender()} />}
         </div>
