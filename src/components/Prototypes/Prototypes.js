@@ -19,8 +19,10 @@ const Prototypes = ({ filename = data, setHtmlContent }) => {
             <div class="flex flex-col h-full">
               <h5 class="project-title mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${prototype.title}</h5>
               <p class="project-description mb-3 font-normal text-gray-700 dark:text-gray-400">${prototype.description}</p>
-              <p class="project-git-repo mt-auto"><i>github repo client: <a href=${gitRepo} target='_blank' rel='noreferrer'>${gitRepo || 'private'}</a></i></p>
-              <p class="project-git-repo mt-auto"><i>github repo api: <a href=${gitRepoApi} target='_blank' rel='noreferrer'>${gitRepoApi || 'private'}</a></i></p>
+              
+              <p class="project-git-repo mt-auto">site: <a href=${prototype.href} target='_blank' rel='noreferrer'>${prototype.href}</a></p>
+              <p class="project-git-repo mt-auto">github repo client: <a href=${gitRepo} target='_blank' rel='noreferrer'>${gitRepo || 'private'}</a></p>
+              <p class="project-git-repo mt-auto">github repo api: <a href=${gitRepoApi} target='_blank' rel='noreferrer'>${gitRepoApi || 'private'}</a></p>
             </div>
           </div>
         `)

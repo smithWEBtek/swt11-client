@@ -329,12 +329,11 @@ body {
 }
 
 .project-card img {
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .project-card img:hover {
   transform: scale(1.01);
-  /* Slightly enlarge the card on hover */
 }
 
 .project-title {
@@ -345,22 +344,28 @@ body {
 }
 
 .project-description {
-  font-size: 90%;
+  font-size: 100%;
   padding-left: 1rem;
   color: #000000;
   width: 100%;
 }
 
 .project-git-repo {
-  font-style: italic;
+  font-size: 90%;
   padding-left: 1rem;
   color: #000000;
+  display: block;
 
   &:hover {
+    font-style: italic;
     cursor: pointer;
     /* transform: scale(1.1); */
     text-shadow: 0 0 1px currentColor;
   }
+}
+
+.repos-container {
+  margin-left: 1rem;
 }
 
 .project-details {
