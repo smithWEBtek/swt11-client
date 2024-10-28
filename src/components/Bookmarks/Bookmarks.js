@@ -66,7 +66,7 @@ const Bookmarks = ({ setHtmlContent }) => {
         {families.map((family, index) => {
           const childBookmarks = family.bookmarks.map((child, childIndex) => (
             <p key={childIndex} className="mb-2 text-gray-500 dark:text-gray-400 bookmark-child">
-              <a href={child.url}>{child.title}</a>
+              <a href={child.url} target='_blank' rel='noreferrer'>{child.title}</a>
             </p>
           ));
           return (
